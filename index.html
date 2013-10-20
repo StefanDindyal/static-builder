@@ -9,6 +9,9 @@
  	<link rel="stylesheet" href="css/foundation.min.css">
  	<link rel="stylesheet" href="css/custom.css">
   	<script src="js/vendor/custom.modernizr.js"></script>
+  	<script type="text/javascript" src="js/raphael.js"></script>
+  	<script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 </head>
 <body>
 	<div id="header">
@@ -54,6 +57,27 @@
 				</div>				
 			</div>
 			<div class="slider-target">
+				<div id="clock">
+					<div class="row">
+						<div class="large-12 columns">
+							<div class="hit-box">
+								<div id="clock_id"></div>
+        						<div id="info_one" class="info right">I’m available for lunch today!</div>
+        						<div id="info_two" class="info right">I’m available for lunch today!</div>
+        						<div id="info_three" class="info right">I’m available for lunch today!</div>
+        						<div id="info_four" class="info right bott">I’m available for lunch today!</div>
+        						<div id="info_five" class="info right bott">I’m available for lunch today!</div>
+        						<div id="info_six" class="info right bott">I’m available for lunch today!</div>
+        						<div id="info_seven" class="info left bott">I’m available for lunch today!</div>
+        						<div id="info_eight" class="info left bott">I’m available for lunch today!</div>
+        						<div id="info_nine" class="info left bott">I’m available for lunch today!</div>
+        						<div id="info_ten" class="info left">I’m available for lunch today!</div>
+        						<div id="info_eleven" class="info left">I’m available for lunch today!</div>
+        						<div id="info_twelve" class="info left">I’m available for lunch today!</div>
+							</div>						
+						</div>
+					</div>
+				</div>
 				<!-- <div id="signup">
 					<div class="row">
 						<div class="large-9 large-centered columns">
@@ -204,6 +228,7 @@
 	document.write('<script src=' +
 	('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery') +
 	'.js><\/script>')
+	draw_clock(); rotate_hands();
 	</script>
   
 	<script src="js/foundation.min.js"></script>
