@@ -48,15 +48,47 @@ body {background-color: #ccc8be;}
 #header .accent {background-color: #e0b1a8; height: 3px;}
 #header .accent .green {background-color: #a3e5bc; width: 50%; height: 3px;}
 #header .logo {width: 148px; height: 117px; float: left; margin-right: 10px; background: url(../img/gonebusy-logo.png) top left no-repeat;}
-#header .mission {}
-#nav {list-style: none; float: right;}
+#header .mission {font-family: 'casper_italicregular', sans-serif; font-size: 16px; line-height: 22px; color: #ccc8be;}
+#nav {list-style: none; float: right; font-family: 'casper_boldregular', sans-serif; font-size: 17px; line-height: 22px;}
 #nav li {display: inline-block; margin-left: 40px;}
 #nav li a {color: #fff;}
-/*main*/
-
+#nav li a:hover {color: #a6f7c5;}
+/*cont*/
+#cont {padding-top: 66px;}
+#search form, #signup form {background-color: #ede9e1; padding: 12px 16px 0;}
+#search input, #signup input {height: 45px; margin-bottom: 12px; border: 0;}
+#search input.searchbox, #signup input.username, #signup input.passphrase {padding-left: 50px; box-shadow: inset 1px 1px 2px rgba(0,0,0,0.20); background-image: url(../img/search-icon.png); background-position: 14px center; background-repeat: no-repeat; font-family: 'casper_boldregular', sans-serif; font-size: 22px; color: #8e8c86;}
+#search input.submit, #signup input.submit {width: 100%; background-color: #a6f7c5; font-family: 'casper_boldregular', sans-serif; font-size: 16px; color: #597f68; text-transform: uppercase; text-align: center; box-shadow: 2px 2px 2px rgba(0,0,0,0.10);}
+/*Slider*/
+#slider .slider-pager {}
+#slider .slider-pager a {width: 78px; height: 80px; display: block; background-image: url(../img/arrows.png); position: absolute; top: 196px;}
+#slider .slider-pager a.prev {background-position: top left; left: 0;}
+#slider .slider-pager a.next {background-position: top right; right: 0;}
+#slider .slider-pager a.prev:hover {background-position: bottom left;}
+#slider .slider-pager a.next:hover {background-position: bottom right;}
+/*Sign Up*/
+#signup {padding-top: 52px;}
+#signup form {min-height: 380px;}
+#signup h2 {position: relative; font-family: 'casper_boldregular', sans-serif; font-size: 23px; color: #597f68; padding-bottom: 4px;}
+#signup h2:after {content: '\0020'; position: absolute; display: block; left: 0; bottom: 0px; width: 100%; height: 1px; background-color: #e4dcca; border-bottom: 1px solid #f1efeb;}
+#signup label {font-family: 'casper_boldregular', sans-serif; font-size: 15px; line-height: 22px; color: #6b6966; text-transform: uppercase; padding-top: 5px;}
+#signup input {height: 42px;}
+#signup input.username {background-image: url(../img/user-icon.png);}
+#signup input.passphrase {background-image: url(../img/pass-icon.png);}
+#signup .base {padding-top: 10px;}
+#signup .log {position: relative; padding-top: 10px;}
+#signup .log:before {content: '\0020'; position: absolute; display: block; left: 0; top: 0px; width: 100%; height: 1px; background-color: #e4dcca; border-bottom: 1px solid #f1efeb;}
+#signup input.submit {box-shadow: none;}
+#signup .forgot {font-family: 'casper_boldregular', sans-serif; font-size: 13px; line-height: 22px; text-align: center; padding: 20px 0 30px;}
+#signup .forgot a {color: #c1bbad;}
+#signup .forgot a:hover {color: #6b6966; text-decoration: underline;}
+#signup .notes {margin-bottom: 12px; padding-top: 5px; list-style: none; font-family: 'casper_boldregular', sans-serif; font-size: 15px; line-height: 28px; color: #969184;}
+/*Works*/
+#works {padding-top: 50px;}
 /*footer*/
-
+#footer {padding: 30px 0; font-family: 'casper_boldregular', sans-serif; font-size: 16px; line-height: 22px; color: #597f68; text-align: center;}
 /*Helpers*/
+.rad {-moz-border-radius: 3px !important; -webkit-border-radius: 3px !important; border-radius: 3px !important;}
 .clearfix:before, .clearfix:after {content: "\0020"; display: block; height: 0; overflow: hidden;}
 .clearfix:after {clear: both;}
 .clearfix {zoom: 1;}
