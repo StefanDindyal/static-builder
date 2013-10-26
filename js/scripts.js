@@ -17,8 +17,8 @@
     })(ang);
     
     box.onclick = function(){
-        box.style.WebkitTransform =  'rotate(-90deg)';
-        box.style.MozTransform =  'rotate(-90deg)';
+        box.style.WebkitTransform =  'rotate(25deg)';
+        box.style.MozTransform =  'rotate(25deg)';
         setTimeout(swing, 1000);
     }
 })();
