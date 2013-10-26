@@ -1,6 +1,6 @@
 (function swing() {
-    var ang  = 40,
-        dAng = 10,
+    var ang  = 25,
+        dAng = 5,
         ddAng = .5,
         dir  = 1,
         box = document.getElementById("box");

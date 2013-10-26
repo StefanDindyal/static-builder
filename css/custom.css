@@ -178,8 +178,8 @@ input.submit:hover {background-color: #ab4b3c !important; color: #ede9e1 !import
     -webkit-transition:-webkit-transform 1s ease-in-out;
     -webkit-transform-origin:center 15px;
 
-    -webkit-transform:rotate(40deg);
-    -moz-transform:rotate(40deg);
+    -webkit-transform:rotate(25deg);
+    -moz-transform:rotate(25deg);
 }
 @-moz-keyframes swing{
     0%{-moz-transform:rotate(-20deg)}
