@@ -170,3 +170,24 @@ input.submit:hover {background-color: #ab4b3c !important; color: #ede9e1 !import
 .clearfix:after {clear: both;}
 .clearfix {zoom: 1;}
 .hidetext {font-size: 5%; text-indent: -9999em; text-align: left; color: transparent; white-space: nowrap; outline: none;}
+
+#header .logo {
+    position: relative;
+    -moz-transition:-moz-transform 1s ease-in-out;
+    -moz-transform-origin: center 15px;
+    -webkit-transition:-webkit-transform 1s ease-in-out;
+    -webkit-transform-origin:center 15px;
+
+    -webkit-transform:rotate(40deg);
+    -moz-transform:rotate(40deg);
+}
+@-moz-keyframes swing{
+    0%{-moz-transform:rotate(-20deg)}
+    50%{-moz-transform:rotate(20deg)}
+    100%{-moz-transform:rotate(-20deg)}
+}
+@-webkit-keyframes swing{
+    0%{-webkit-transform:rotate(-20deg)}
+    50%{-webkit-transform:rotate(20deg)}
+    100%{-webkit-transform:rotate(-20deg)}
+}

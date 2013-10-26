@@ -1,3 +1,28 @@
+(function swing() {
+    var ang  = 40,
+        dAng = 10,
+        ddAng = .5,
+        dir  = 1,
+        box = document.getElementById("box");
+    
+    (function setAng(ang){
+        box.style.WebkitTransform =  'rotate('+ang+'deg)';
+        box.style.MozTransform =  'rotate('+ang+'deg)';
+        dir = -dir;
+        if (dAng > 1)
+            dAng -= ddAng;
+        
+        if (Math.abs(ang) > 0)
+            setTimeout(setAng, 1000, dir * (Math.abs(ang)-dAng));
+    })(ang);
+    
+    box.onclick = function(){
+        box.style.WebkitTransform =  'rotate(-90deg)';
+        box.style.MozTransform =  'rotate(-90deg)';
+        setTimeout(swing, 1000);
+    }
+})();
+
 var now = new Date();
 var step_time = 3000;
 var start_time = new Date(now.getFullYear(), now.getMonth(),
