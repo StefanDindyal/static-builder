@@ -1,7 +1,9 @@
 $(document).ready(function(){
     $('#box').delay(500).fadeTo(222,1);
-    draw_clock(); 
-    rotate_hands();
+    if($('#clock_id').length){
+        draw_clock(); 
+        rotate_hands();
+    };    
     startLoop();
     (function swing() {
         var ang  = 25,
@@ -61,9 +63,9 @@ function doSomething(){
     } else {
         i = 0;
     }
-    $('.search-msg').animate({'bottom':0}, 500, function(){
+    $('.search-msg').animate({'bottom':0}, 450, function(){
         var tool = setTimeout(function(){
-            $('.search-msg').animate({'bottom':'100%'}, 500, function(){
+            $('.search-msg').animate({'bottom':'100%'}, 450, function(){
                 $('.search-msg').css('bottom','-100%');                
             });
         },1000);

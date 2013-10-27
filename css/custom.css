@@ -121,11 +121,14 @@ body {background-color: #ccc8be;}
 #results .search-options .hold {-moz-border-radius: 3px !important; -webkit-border-radius: 3px !important; border-radius: 3px !important; background-color: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.10); margin-bottom: 24px; overflow: hidden;}
 #results .heading .space, #results .heading .cent {font-family: 'casper_boldregular', sans-serif; font-size: 14px; color: #6b6966; text-transform: uppercase;}
 #results .space {padding: 10px 10px 10px 32px;}
+#results .heading .cent {float: left; padding: 0; text-align: center; width: 100%; max-width: 30%;}
 #results .cent {text-align: center; padding: 10px 0;}
-#results .search-options .space {padding: 28px 10px 28px 32px; font-family: 'casperregular', sans-serif; font-size: 14px; line-height: 16px; color: #6b6966;}
-#results .search-options .cent {padding: 28px 0 0; font-family: 'casper_boldregular', sans-serif; font-size: 11px;  color: #6b6966; min-height: 155px; position: relative;}
-#results .search-options .cent:after {content: '\0020'; position: absolute; top: 0; right: -1.4em; width: 1px; height: 100%; background-color: #e5e4e2; border-right: 1px solid #fffffd;}
-#results .search-options .cent.last {padding-right: 0px;}
+#results .search-options .space {padding: 28px 0 28px 32px; font-family: 'casperregular', sans-serif; font-size: 14px; line-height: 16px; color: #6b6966;}
+#results .search-options .cent {padding: 28px 0 0; font-family: 'casper_boldregular', sans-serif; font-size: 11px;  color: #6b6966; min-height: 155px; position: relative; float: left; width: 100%; max-width: 30%;}
+#results .cent.smer {max-width: 22%;}
+#results .cent.smer.rate {max-width: 18%;}
+#results .search-options .cent:after {content: '\0020'; position: absolute; top: 0; right: 0; width: 1px; height: 100%; background-color: #e5e4e2; border-right: 1px solid #fffffd;}
+#results .search-options .cent.last {padding: 0 10px;}
 #results .search-options .cent.last:after {display: none;}
 #results .search-options .head {font-family: 'casper_boldregular', sans-serif; font-size: 22px; line-height: 33px; float: left; margin-right: 15px;}
 #results .search-options .loc {font-family: 'casper_boldregular', sans-serif; font-size: 13px; line-height: 39px; color: #bebcb7; text-transform: uppercase;}
@@ -133,7 +136,7 @@ body {background-color: #ccc8be;}
 #results .search-options .review {font-family: 'casper_bold_italicregular', sans-serif; font-size: 13px; color: #a39679; float: left;}
 #results .search-options .more-revs {font-family: 'casper_boldregular', sans-serif; font-size: 11px; color: #ab4b3c; float: right;}
 #results .steep {padding-left: 12px;}
-#results .heading .steep {padding-left: 0px;}
+#results .heading .steep {padding: 10px 0;}
 #results .cents {min-height: 155px; position: relative; background-color: #f3f2ee;}
 #results .num {padding: 30px 0; font-size: 26px; color: #99927f;}
 #results .rate-box {position: relative; width: 93px; height: 17px; margin: 0 auto; background-color: #c4c2bc; margin-top: -6px;}
@@ -152,18 +155,18 @@ body {background-color: #ccc8be;}
 #clock .info {position: absolute; display: none; width: 272px; padding: 20px; background-color: #fff; color: #565656; font-family: 'casper_boldregular', sans-serif; font-size: 16px; line-height: 22px; box-shadow: inset 0 0 10px rgba(0,0,0,0.10); -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;}
 #clock .info:after {content: '\0020'; position: absolute; bottom: -10px; left: 30px; width: 26px; height: 17px; background: url(../img/sliver.png) top left no-repeat;}
 #clock .info.left:after {left: auto; right: 30px;}
-#info_one {top: -30px; left: 240px;}
-#info_two {top: 90px; left: 285px;}
-#info_three {top: 155px; left: 320px;}
-#info_four {top: 220px; left: 365px;}
-#info_five {top: 285px; left: 320px;}
-#info_six {top: 350px; left: 250px;}
-#info_seven {top: 350px; left: -70px;}
-#info_eight {top: 285px; left: -140px;}
-#info_nine {top: 220px; left: -185px;}
-#info_ten {top: 155px; left: -140px;}
-#info_eleven {top: 90px; left: -100px;}
-#info_twelve {top: 25px; left: -65px;}
+#info_one {top: -30px; right: -65px;}
+#info_two {top: 30px; right: -150px;}
+#info_three {top: 100px; right: -185px;}
+#info_four {top: 185px; right: -185px;}
+#info_five {top: 250px; right: -150px;}
+#info_six {top: 320px; right: -65px;}
+#info_seven {top: 320px; left: -65px;}
+#info_eight {top: 250px; left: -150px;}
+#info_nine {top: 185px; left: -185px;}
+#info_ten {top: 100px; left: -185px;}
+#info_eleven {top: 30px; left: -150px;}
+#info_twelve {top: -30px; left: -65px;}
 /*footer*/
 #footer {padding: 30px 0; font-family: 'casper_boldregular', sans-serif; font-size: 16px; line-height: 22px; color: #597f68; text-align: center;}
 /*Helpers*/
