@@ -1,27 +1,63 @@
-(function swing() {
-    var ang  = 25,
-        dAng = 5,
-        ddAng = .5,
-        dir  = 1,
-        box = document.getElementById("box");
-    
-    (function setAng(ang){
-        box.style.WebkitTransform =  'rotate('+ang+'deg)';
-        box.style.MozTransform =  'rotate('+ang+'deg)';
-        dir = -dir;
-        if (dAng > 1)
-            dAng -= ddAng;
+$(document).ready(function(){
+    $('#box').delay(500).fadeTo(222,1);
+    draw_clock(); 
+    rotate_hands();
+    startLoop();
+    (function swing() {
+        var ang  = 25,
+            dAng = 5,
+            ddAng = .5,
+            dir  = 1,
+            box = document.getElementById("box");
         
-        if (Math.abs(ang) > 0)
-            setTimeout(setAng, 1000, dir * (Math.abs(ang)-dAng));
-    })(ang);
-    
-    box.onclick = function(){
-        box.style.WebkitTransform =  'rotate(25deg)';
-        box.style.MozTransform =  'rotate(25deg)';
-        setTimeout(swing, 1000);
-    }
-})();
+        (function setAng(ang){
+            box.style.WebkitTransform =  'rotate('+ang+'deg)';
+            box.style.MozTransform =  'rotate('+ang+'deg)';
+            dir = -dir;
+            if (dAng > 1)
+                dAng -= ddAng;
+            
+            if (Math.abs(ang) > 0)
+                setTimeout(setAng, 1000, dir * (Math.abs(ang)-dAng));
+        })(ang);
+        
+        box.onclick = function(){
+            box.style.WebkitTransform =  'rotate(25deg)';
+            box.style.MozTransform =  'rotate(25deg)';
+            setTimeout(swing, 1000);
+        }
+    })();
+    $('.searchbox').focus(function(){
+        clearInterval(myInterval);
+    });
+    $('.searchbox').blur(function(){
+        startLoop();
+    });
+});
+
+var iFrequency = 2000; // expressed in miliseconds
+var myInterval = 0;
+var i = 0;
+var array = [
+'Find some time...', 
+'My time...', 
+'Check the time...'
+];
+
+// STARTS and Resets the loop if any
+function startLoop() {
+    if(myInterval > 0) clearInterval(myInterval);  // stop
+    myInterval = setInterval( "doSomething()", iFrequency );  // run
+}
+
+function doSomething(){    
+    $('.searchbox').attr('placeholder',array[i]);
+    if(i<array.length){
+        i++;
+    } else {
+        i = 0;
+    }    
+}
 
 var now = new Date();
 var step_time = 3000;
