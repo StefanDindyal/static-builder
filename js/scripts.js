@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    $('#box').delay(500).fadeTo(222,1);
+    $('#box').delay(500).animate({'width':148,'height':117, 'opacity':1}, 250, function(){$('body').css('overflow','visible')});
+    // 148
+    // 117
     if($('#clock_id').length){
         draw_clock(); 
         rotate_hands();
