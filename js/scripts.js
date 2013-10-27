@@ -29,9 +29,13 @@ $(document).ready(function(){
     })();
     $('.searchbox').focus(function(){
         clearInterval(myInterval);
+        $('.search-msg').hide();
     });
-    $('.searchbox').blur(function(){
-        startLoop();
+    $('.searchbox').blur(function(){        
+        if($(this).val()==''){
+            startLoop();
+            $('.search-msg').show();
+        }
     });
 });
 
@@ -50,13 +54,20 @@ function startLoop() {
     myInterval = setInterval( "doSomething()", iFrequency );  // run
 }
 
-function doSomething(){    
-    $('.searchbox').attr('placeholder',array[i]);
-    if(i<array.length){
+function doSomething(){        
+    $('.search-msg').text(array[i]);
+    if(i<(array.length)-1){
         i++;
     } else {
         i = 0;
-    }    
+    }
+    $('.search-msg').animate({'bottom':0}, 500, function(){
+        var tool = setTimeout(function(){
+            $('.search-msg').animate({'bottom':'100%'}, 500, function(){
+                $('.search-msg').css('bottom','-100%');                
+            });
+        },1000);
+    });  
 }
 
 var now = new Date();
