@@ -7,6 +7,7 @@
   	<title>Home Page</title>
   	<link rel="stylesheet" href="css/normalize.css">
  	<link rel="stylesheet" href="css/foundation.min.css">
+ 	<link rel="stylesheet" href="css/jquery.bxslider.css">
  	<link rel="stylesheet" href="css/custom.css"> 	  	
 </head>
 <body>
@@ -35,7 +36,7 @@
 					<form class="rad">
 						<div class="row">
 							<div class="large-10 columns">
-								<div class="search-w"><input class="searchbox rad" type="text" name="search" maxlength="50" size="20" value=""/><div class="search-msg">Man with a van...</div></div>
+								<div class="search-w"><input class="searchbox rad" type="text" name="search" maxlength="50" size="20" value=""/><div id="search-msg">Man with a van...</div></div>
 							</div>
 							<div class="large-2 columns">
 								<input class="submit rad" type="submit"  value="Search"/>
@@ -45,17 +46,9 @@
 				</div>
 			</div>
 		</div>
-		<div id="slider">
-			<div class="slider-pager">
-				<div class="row">
-					<div class="large-12 columns">
-						<a href="#" class="prev hidetext">Prev</a>
-						<a href="#" class="next hidetext">Next</a>
-					</div>
-				</div>				
-			</div>
+		<div id="slider">			
 			<div class="slider-target">
-				<div id="clock">
+				<div id="clock" class="slide">
 					<div class="row">
 						<div class="large-12 columns">
 							<div class="hit-box">
@@ -76,7 +69,7 @@
 						</div>
 					</div>
 				</div>
-				<!-- <div id="signup">
+				<div id="signup" class="slide">
 					<div class="row">
 						<div class="large-9 large-centered columns">
 							<div class="row">
@@ -127,8 +120,44 @@
 							</div>
 						</div>
 					</div>
-				</div> -->				
-				<!-- <div id="works">
+				</div>
+				<div id="how" class="slide">
+					<div class="row">
+						<div class="large-10 large-centered columns">
+							<div class="block rad">
+								<div class="row">
+									<div class ="large-12 columns">
+										<h2>How does GoneBusy work?</h2>												
+									</div>
+									<div class="log">
+										<div class="row">
+											<div class="large-11 large-centered columns">
+												<div class="row">
+													<div class="large-4 columns">
+														<div class="num">1</div>
+														<div class="text">Post your time<br>or search for others.</div>
+													</div>
+													<div class="large-4 columns">
+														<div class="num">2</div>
+														<div class="text">Compare prices, revies,<br>and available times.</div>
+													</div>
+													<div class="large-4 columns">
+														<div class="num">3</div>
+														<div class="text">Reserve time with confirmations,<br>reminders and updates.</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>										
+								</div>
+							</div>
+							<div class="log lower">
+								<input class="submit rad" type="submit"  value="Contact us today!"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="works" class="slide">
 					<div class="row">
 						<div class="large-9 large-centered columns">
 							<div class="row">
@@ -173,47 +202,10 @@
 							</div>
 						</div>
 					</div>
-				</div> -->
-				<!-- <div id="how">
-					<div class="row">
-						<div class="large-10 large-centered columns">
-							<div class="block rad">
-								<div class="row">
-									<div class ="large-12 columns">
-										<h2>How does GoneBusy work?</h2>												
-									</div>
-									<div class="log">
-										<div class="row">
-											<div class="large-11 large-centered columns">
-												<div class="row">
-													<div class="large-4 columns">
-														<div class="num">1</div>
-														<div class="text">Post your time<br>or search for others.</div>
-													</div>
-													<div class="large-4 columns">
-														<div class="num">2</div>
-														<div class="text">Compare prices, revies,<br>and available times.</div>
-													</div>
-													<div class="large-4 columns">
-														<div class="num">3</div>
-														<div class="text">Reserve time with confirmations,<br>reminders and updates.</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>										
-								</div>
-							</div>
-							<div class="log lower">
-								<input class="submit rad" type="submit"  value="Contact us today!"/>
-							</div>
-						</div>
-					</div>
-				</div> -->
+				</div>
 			</div>
 		</div>	
 	</div>
-
 	<div id="footer">
 		<div class="row">
 			<div class="large-12 columns">
@@ -221,10 +213,10 @@
 			</div>
 		</div>
 	</div>
-
 	<script src="js/vendor/custom.modernizr.js"></script>
   	<script type="text/javascript" src="js/raphael.js"></script>
   	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  	<script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
   	<script type="text/javascript" src="js/scripts.js"></script>  	
 	<script>
 	document.write('<script src=' +
