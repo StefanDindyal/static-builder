@@ -1,0 +1,715 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+
+* {
+	-moz-box-sizing:border-box;
+	box-sizing: border-box;
+}
+
+a, div, body, .mainLogo, .mainLogo2, .introUp {
+	-webkit-transition:all .50s ease-in-out;
+	-moz-transition:all .50s ease-in-out;
+	-o-transition:all .50s ease-in-out;
+	transition:all .50s ease-in-out;
+}
+
+#menuBurger {
+	-webkit-transition:all .30s ease-in-out;
+	-moz-transition:all .30s ease-in-out;
+	-o-transition:all .30s ease-in-out;
+	transition:all .30s ease-in-out;
+}
+
+
+
+
+/* --------------------------Start Code---------------------- */
+
+body, html {
+  height: 100%;
+}
+
+body {
+	background: white;
+	font-family: 'Roboto', sans-serif;
+	color: #222222;
+	height: 100%;
+	background: black center top;
+}
+
+a {
+	color: #222222;
+	text-decoration:none;
+}
+
+a:hover {
+	color: #222222;
+}
+
+a:visited {
+	color: #222222;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
+}
+
+
+#intro {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	top: 0;
+	text-align: center;
+}
+
+#introContainer {
+	height: auto;
+	text-align: center;
+	color: white;
+	z-index: 99;
+}
+
+.introDown #introText {
+	margin: 14px auto;
+	font-size: 1.5em;
+	font-style: italic;
+	line-height: .6;
+	height:  0px;
+	color: #635942;
+}
+
+.introDown {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin: -350px -450px;
+	width: 900px;
+	z-index: 99;
+}
+
+.introUp {
+	position: fixed;
+	width: 100px;
+	top: 20px;
+	left: 50%;
+	margin-left: -50px;
+	z-index: 99;
+}
+
+.introUp #introText {
+	display: none;
+	height: 0px;
+}
+
+.hide {
+	opacity: 0;
+	height:  0;
+}
+
+.reveal {
+	opacity: 1;
+	height:  auto;
+}
+
+.mainLogo {
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+.mainLogo2 {
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: aboslute;
+}
+
+.introUp .mainLogo {
+	opacity: 0;
+}
+
+.introDown .mainLogo2 {
+	opacity: 0;
+}
+
+.introUp .mainLogo2 {
+	opacity:1;
+}
+
+#mainWrap {
+	position: relative;
+}
+
+#homeWrap {
+	width: 100%;
+	position: relative;
+	margin: 0px auto;
+	display: block;
+	z-index: 1;
+}
+
+.homeContainer {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto
+}
+
+.mainDown {
+	bottom: 5%;
+
+}
+
+.mainUp {
+	bottom: 45%;
+
+}
+
+#dropInfo {
+	width: 100%;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: lightgrey; 
+}
+
+.dropDown {
+	overflow: auto;
+}
+
+.dropUp {
+	height: 2px;
+	z-index: 2;
+}
+
+.dropOpen {
+	height: 95%;
+}
+
+#menuBurger {
+	display: block;
+	width: 44px;
+	height: 30px;
+	margin-bottom:10px;
+	position: absolute;
+	left: 50%;
+	margin-left: -22px;
+	padding: 4px;
+	z-index: 98;
+}
+
+#menuBurger:hover {
+	cursor: pointer
+}
+
+.dropUp #menuBurger {
+	animation:burgerDrop .8s 1;
+    animation-fill-mode: forwards;
+	
+	-webkit-animation:burgerDrop .8s 1;
+	-webkit-animation-fill-mode: forwards;
+
+
+}
+
+	@keyframes burgerDrop
+		{
+			from   {margin-bottom:600px;}
+			90%  {margin-bottom:-30px;}
+			to {margin-bottom:-5px;}
+		}
+
+	@-webkit-keyframes burgerDrop
+		{
+			from   {top:-600px}
+			95%  {top: 100px;}
+			to {top:80px;}
+		}
+
+
+
+.burgerBar {
+	margin: 2px auto;
+}
+
+#bBar2 {
+	float: left;
+}
+
+#bBar3 {
+	float: right;
+}
+
+.dropUp .burgerBar {
+	width: 100%;
+	height: 4px;
+	background: #4d4d4d;
+	border-radius: 2px;
+	position: relative;
+	margin-top: 2px;
+}
+
+#menuBurger:hover #bBar1 {
+	width: 32px;
+}
+
+#menuBurger #bBar2 {
+	animation:rotateLout .3s 1;
+    animation-fill-mode: forwards;
+	
+	-webkit-animation:rotateLout .3s 1;
+	-webkit-animation-fill-mode: forwards;
+}
+
+	@-webkit-keyframes rotateLout
+		{
+			from	{
+					transform:rotate(45deg);
+					-ms-transform:rotate(45deg); 
+					-webkit-transform:rotate(45deg);
+					width: 60%;
+					}
+					
+			to	{
+					transform:rotate(0deg);
+					-ms-transform:rotate(0deg); 
+					-webkit-transform:rotate(0deg);
+					width: 100%;
+					}
+		}
+
+#menuBurger:hover #bBar2 {
+	animation:rotateL .3s 1;
+    animation-fill-mode: forwards;
+	
+	-webkit-animation:rotateL .3s 1;
+	-webkit-animation-fill-mode: forwards;
+}
+
+	@-webkit-keyframes rotateL
+		{
+			from	{
+					transform:rotate(0deg);
+					-ms-transform:rotate(0deg); 
+					-webkit-transform:rotate(0deg);
+					width: 100%;
+					}
+					
+			to	{
+					transform:rotate(45deg);
+					-ms-transform:rotate(45deg); 
+					-webkit-transform:rotate(45deg);
+					width: 60%;
+					}
+		}
+		
+#menuBurger #bBar3 {
+	animation:rotateRout .4s 1;
+    animation-fill-mode: forwards;
+	
+	-webkit-animation:rotateRout .4s 1;
+	-webkit-animation-fill-mode: forwards;
+}
+
+	@-webkit-keyframes rotateRout
+		{
+			from	{
+					transform:rotate(-45deg);
+					-ms-transform:rotate(-45deg); 
+					-webkit-transform:rotate(-45deg);
+					width: 60%;
+					}
+					
+			to	{
+					transform:rotate(0deg);
+					-ms-transform:rotate(0deg); 
+					-webkit-transform:rotate(0deg);
+					width: 100%;
+					margin-top: 2px;
+					}
+		}
+		
+
+#menuBurger:hover #bBar3 {
+	animation:rotateR .4s 1;
+    animation-fill-mode: forwards;
+	
+	-webkit-animation:rotateR .4s 1;
+	-webkit-animation-fill-mode: forwards;
+}
+
+	@-webkit-keyframes rotateR
+		{
+			from	{
+					transform:rotate(0deg);
+					-ms-transform:rotate(0deg); 
+					-webkit-transform:rotate(0deg);
+					width: 100%;
+					}
+					
+			to	{
+					transform:rotate(-45deg);
+					-ms-transform:rotate(-45deg); 
+					-webkit-transform:rotate(-45deg);
+					width: 60%;
+					margin-top: -6px;
+					}
+		}
+
+.closeProject {
+	background: #434343 url("images/close.png") no-repeat 12px 9px;
+	position: fixed;
+	top: -80px;
+	right: 20px;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+	z-index: 101;
+	padding-top: 30px;
+	
+	-webkit-transition:all .20s ease-in-out;
+	-moz-transition:all .20s ease-in-out;
+	-o-transition:all .20s ease-in-out;
+	transition:all .20s ease-in-out;
+}
+
+.closeText {
+	color: #f4f4f4;
+	opacity:0;
+	font-family: 'Roboto Slab', serif;
+	font-weight: 300;
+	text-decoration: none;
+	
+	-webkit-transition:all .30s ease-in-out;
+	-moz-transition:all .30s ease-in-out;
+	-o-transition:all .30s ease-in-out;
+	transition:all .30s ease-in-out; 
+}
+
+.closeProject:hover {
+	background-position:  12px -90px
+}
+
+.closeProject:hover .closeText {
+	opacity: 1;
+}
+
+#content {
+	position: absolute;
+	left: 0;
+	top: 0;
+	color: #222222;
+	background: white;
+	text-align: center;
+	width:100%;
+	z-index: 100;
+	-webkit-transition:all .30s ease-in-out;
+	-moz-transition:all .30s ease-in-out;
+	-o-transition:all .30s ease-in-out;
+	transition:all .30s ease-in-out;
+}
+
+.contentClose {
+	opacity: 0;
+	width: 0;
+}
+
+.contentOpen {
+	opacity: 1;
+	width: 200px;
+}
+
+.bio {
+	padding: 1%;
+	width: 100%;
+	margin-bottom: 300px;
+	display: inline-block;
+}
+
+.bioContainer{
+	width: 90%;
+	position: relative;
+	margin: 0px auto;
+	color: #777777;
+}
+
+.bioTitleContainer {
+	width: 700px;
+	display: inline;
+}
+
+#bioTitle, .problem {
+	font-size: 5em;
+	font-family: "adriane";
+	font-style: italic;
+	line-height:1.14;
+}
+
+
+.problem {
+	display: block;
+	color: #4d4d4d;
+}
+
+.bioText, p  {
+	font-size: 1.2em;
+	font-family:"nimbus-sans", sans-serif;
+	font-weight: 300;
+	line-height: 1.5em;
+	color: #777777;
+}
+
+.bioText {
+	float: right;
+	width: 100%;
+	padding-left:260px; 
+	position: absolute;
+	top: 211px;
+	margin-top: 20px;
+}
+
+#workWrap {
+	width: 100%
+}
+
+.projectItem {
+	width: 48%;
+	float: left;
+	overflow: hidden;
+	display: block;
+	position: relative;
+	margin: 1%;
+	text-align: center;
+	background: rgba(255, 255, 255, 0.2);
+	padding: 1%;
+}
+
+.projectInfo {
+	position: absolute;
+	width: 97%;
+	text-align: center;
+	z-index: 2;
+	top: 0px;
+	margin-top: 16%;
+}
+
+.projectText{
+	margin-top: 20px;
+	z-index:2;
+	position: relative;
+	display: block;
+}
+
+.projectThumb {
+	width: 100%;
+	float: left;
+	display:inline-block;
+	opacity: .1;
+	z-index: 10;
+}
+
+.projectTitle {
+	font-size: 1.2em;
+	font-family: ""adriane"", serif;
+	font-weight: 400;
+	color: #777777;
+}
+
+.projectItem:hover .projectThumb {
+	opacity: 1;
+}
+
+.projectItem:hover .projectLogo, .projectItem:hover .projectText {
+	opacity:0;
+	
+	-webkit-transition:all .20s ease-in-out;
+	-moz-transition:all .20s ease-in-out;
+	-o-transition:all .20s ease-in-out;
+	transition:all .20s ease-in-out;
+}
+
+.projectThumb img {
+	width: 100%;
+	display:block;
+}
+
+
+
+
+
+/* ------------------------Start external Styling---------------------- */
+
+.loadTarget {
+	width: 100%;
+}
+
+#cnt {
+	width: 100%;
+	max-width: 1200px;
+	margin: 110px auto;
+	padding: 0px 20px;
+}
+
+
+.detailedInfo {
+	width: 100%;
+	position: relative;
+	display: block;
+	text-align: center;
+	float: left;
+	margin-bottom: 68px;
+
+}
+
+.logoContainer {
+	width: 165px;
+
+	margin: 0 auto;
+}
+
+.logoContainer img {
+	width: 100%;
+}
+
+#cnt .projectLogo {
+	margin: 0px;
+}
+
+.detailedInfo .projectTitle {
+    display: block;
+	
+    margin-top: 18px;
+}
+
+.detailedInfo .projectCat {
+	font-family: 'Roboto Slab', serif;
+	display: block;
+	font-weight: 300;
+	font-size: 1em;
+	margin: 11px 0 25px;
+	width: 100%;
+}
+
+.comp {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	border-top: 1px solid #f5f5f5;
+	padding-top: 30px;
+}
+
+.comp img {
+	width: 100%;
+}
+
+/* -----------------------End external Styling------------------------ */
+
+@media all and (max-width: 900px){
+
+	.mainUp {
+		bottom: -60%;
+	}
+	.introDown {
+		width: 90%;
+		margin: -40% -45%
+	}
+	
+	.bioText {
+		position: relative;
+		margin: 0 auto;
+		padding: 0px;
+		top: 30px;
+		float: none;
+	}
+
+	.bioTitleContainer {
+		width: 100%;
+	}
+	
+	#bioTitle, .problem {
+		font-size: 4em;
+	}
+	
+	.bio {
+		margin-bottom: 150px;
+	}
+	
+	.projectInfo {
+		margin-top: 25%;
+	}
+	
+	.projectLogo {
+		width: 40%;
+	}
+}
+
+@media all and (max-width: 600px){
+	
+	.projectItem {
+		width: 100%;
+	
+		margin:  0;
+}
+	
+	#introContainer {
+		width: 90%;
+	}
+}
