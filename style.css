@@ -228,7 +228,7 @@ a:visited {
 	position: fixed;
 	top: 0px;
 	left: 0px;
-	background: lightgrey; 
+	background: rgba(255,255,255,0.85); 
 }
 
 .dropDown {
@@ -241,7 +241,7 @@ a:visited {
 }
 
 .dropOpen {
-	height: 95%;
+	height: 140px;
 }
 
 #menuBurger {
@@ -260,22 +260,14 @@ a:visited {
 	cursor: pointer
 }
 
-.dropUp #menuBurger {
-	animation:burgerDrop .8s 1;
-    animation-fill-mode: forwards;
-	
+.dropUp #menuBurger {	
 	-webkit-animation:burgerDrop .8s 1;
 	-webkit-animation-fill-mode: forwards;
-
-
+	-moz-animation:burgerDrop .8s 1;
+	-moz-animation-fill-mode: forwards;
+	animation:burgerDrop .8s 1;
+    animation-fill-mode: forwards;
 }
-
-	@keyframes burgerDrop
-		{
-			from   {margin-bottom:600px;}
-			90%  {margin-bottom:-30px;}
-			to {margin-bottom:-5px;}
-		}
 
 	@-webkit-keyframes burgerDrop
 		{
@@ -284,7 +276,19 @@ a:visited {
 			to {top:80px;}
 		}
 
+	@-moz-keyframes burgerDrop
+		{
+			from   {top:-600px}
+			95%  {top: 100px;}
+			to {top:80px;}
+		}
 
+	@keyframes burgerDrop
+		{
+			from   {margin-bottom:600px;}
+			90%  {margin-bottom:-30px;}
+			to {margin-bottom:-5px;}
+		}
 
 .burgerBar {
 	margin: 2px auto;
@@ -311,12 +315,13 @@ a:visited {
 	width: 32px;
 }
 
-#menuBurger #bBar2 {
-	animation:rotateLout .3s 1;
-    animation-fill-mode: forwards;
-	
+#menuBurger #bBar2 {		
 	-webkit-animation:rotateLout .3s 1;
 	-webkit-animation-fill-mode: forwards;
+	-moz-animation:rotateLout .3s 1;
+    -moz-animation-fill-mode: forwards;
+    animation:rotateLout .3s 1;
+    animation-fill-mode: forwards;
 }
 
 	@-webkit-keyframes rotateLout
@@ -336,12 +341,47 @@ a:visited {
 					}
 		}
 
-#menuBurger:hover #bBar2 {
-	animation:rotateL .3s 1;
-    animation-fill-mode: forwards;
-	
+	@-moz-keyframes rotateLout
+		{
+			from	{
+					transform:rotate(45deg);
+					-ms-transform:rotate(45deg); 
+					-webkit-transform:rotate(45deg);
+					width: 60%;
+					}
+					
+			to	{
+					transform:rotate(0deg);
+					-ms-transform:rotate(0deg); 
+					-webkit-transform:rotate(0deg);
+					width: 100%;
+					}
+		}
+
+	@keyframes rotateLout
+		{
+			from	{
+					transform:rotate(45deg);
+					-ms-transform:rotate(45deg); 
+					-webkit-transform:rotate(45deg);
+					width: 60%;
+					}
+					
+			to	{
+					transform:rotate(0deg);
+					-ms-transform:rotate(0deg); 
+					-webkit-transform:rotate(0deg);
+					width: 100%;
+					}
+		}
+
+#menuBurger:hover #bBar2 {		
 	-webkit-animation:rotateL .3s 1;
 	-webkit-animation-fill-mode: forwards;
+	-moz-animation:rotateL .3s 1;
+    -mozanimation-fill-mode: forwards;
+    animation:rotateL .3s 1;
+    animation-fill-mode: forwards;
 }
 
 	@-webkit-keyframes rotateL
@@ -360,13 +400,48 @@ a:visited {
 					width: 60%;
 					}
 		}
+
+	@-moz-keyframes rotateL
+		{
+			from	{
+					transform:rotate(0deg);
+					-ms-transform:rotate(0deg); 
+					-webkit-transform:rotate(0deg);
+					width: 100%;
+					}
+					
+			to	{
+					transform:rotate(45deg);
+					-ms-transform:rotate(45deg); 
+					-webkit-transform:rotate(45deg);
+					width: 60%;
+					}
+		}
+
+	@keyframes rotateL
+		{
+			from	{
+					transform:rotate(0deg);
+					-ms-transform:rotate(0deg); 
+					-webkit-transform:rotate(0deg);
+					width: 100%;
+					}
+					
+			to	{
+					transform:rotate(45deg);
+					-ms-transform:rotate(45deg); 
+					-webkit-transform:rotate(45deg);
+					width: 60%;
+					}
+		}
 		
-#menuBurger #bBar3 {
-	animation:rotateRout .4s 1;
-    animation-fill-mode: forwards;
-	
+#menuBurger #bBar3 {		
 	-webkit-animation:rotateRout .4s 1;
 	-webkit-animation-fill-mode: forwards;
+	-moz-animation:rotateRout .4s 1;
+    -moz-animation-fill-mode: forwards;
+    animation:rotateRout .4s 1;
+    animation-fill-mode: forwards;
 }
 
 	@-webkit-keyframes rotateRout
@@ -386,14 +461,51 @@ a:visited {
 					margin-top: 2px;
 					}
 		}
+
+	@-moz-keyframes rotateRout
+		{
+			from	{
+					transform:rotate(-45deg);
+					-ms-transform:rotate(-45deg); 
+					-webkit-transform:rotate(-45deg);
+					width: 60%;
+					}
+					
+			to	{
+					transform:rotate(0deg);
+					-ms-transform:rotate(0deg); 
+					-webkit-transform:rotate(0deg);
+					width: 100%;
+					margin-top: 2px;
+					}
+		}
+
+	@keyframes rotateRout
+		{
+			from	{
+					transform:rotate(-45deg);
+					-ms-transform:rotate(-45deg); 
+					-webkit-transform:rotate(-45deg);
+					width: 60%;
+					}
+					
+			to	{
+					transform:rotate(0deg);
+					-ms-transform:rotate(0deg); 
+					-webkit-transform:rotate(0deg);
+					width: 100%;
+					margin-top: 2px;
+					}
+		}
 		
 
-#menuBurger:hover #bBar3 {
-	animation:rotateR .4s 1;
-    animation-fill-mode: forwards;
-	
+#menuBurger:hover #bBar3 {		
 	-webkit-animation:rotateR .4s 1;
 	-webkit-animation-fill-mode: forwards;
+	-moz-animation:rotateR .4s 1;
+    -moz-animation-fill-mode: forwards;
+    animation:rotateR .4s 1;
+    animation-fill-mode: forwards;
 }
 
 	@-webkit-keyframes rotateR
@@ -414,8 +526,45 @@ a:visited {
 					}
 		}
 
+	@-moz-keyframes rotateR
+		{
+			from	{
+					transform:rotate(0deg);
+					-ms-transform:rotate(0deg); 
+					-webkit-transform:rotate(0deg);
+					width: 100%;
+					}
+					
+			to	{
+					transform:rotate(-45deg);
+					-ms-transform:rotate(-45deg); 
+					-webkit-transform:rotate(-45deg);
+					width: 60%;
+					margin-top: -6px;
+					}
+		}
+
+	@keyframes rotateR
+		{
+			from	{
+					transform:rotate(0deg);
+					-ms-transform:rotate(0deg); 
+					-webkit-transform:rotate(0deg);
+					width: 100%;
+					}
+					
+			to	{
+					transform:rotate(-45deg);
+					-ms-transform:rotate(-45deg); 
+					-webkit-transform:rotate(-45deg);
+					width: 60%;
+					margin-top: -6px;
+					}
+		}
+
 .closeProject {
-	background: #434343 url("images/close.png") no-repeat 12px 9px;
+	/*background: #434343 url("images/close.png") no-repeat 12px 9px;*/
+	background-color: #434343;
 	position: fixed;
 	top: -80px;
 	right: 20px;
@@ -423,8 +572,7 @@ a:visited {
 	height: 80px;
 	text-align: center;
 	z-index: 101;
-	padding-top: 30px;
-	
+padding-top: 30px;	
 	-webkit-transition:all .20s ease-in-out;
 	-moz-transition:all .20s ease-in-out;
 	-o-transition:all .20s ease-in-out;
@@ -436,8 +584,7 @@ a:visited {
 	opacity:0;
 	font-family: 'Roboto Slab', serif;
 	font-weight: 300;
-	text-decoration: none;
-	
+	text-decoration: none;	
 	-webkit-transition:all .30s ease-in-out;
 	-moz-transition:all .30s ease-in-out;
 	-o-transition:all .30s ease-in-out;
@@ -453,28 +600,32 @@ a:visited {
 }
 
 #content {
-	position: absolute;
+	position: fixed;
 	left: 0;
 	top: 0;
 	color: #222222;
 	background: white;
 	text-align: center;
-	width:100%;
+	overflow: hidden;
+	width:0;
+	height: 100%;
 	z-index: 100;
+	opacity: 0;	
 	-webkit-transition:all .30s ease-in-out;
 	-moz-transition:all .30s ease-in-out;
 	-o-transition:all .30s ease-in-out;
 	transition:all .30s ease-in-out;
 }
 
-.contentClose {
-	opacity: 0;
-	width: 0;
+#content.contentOpen {
+	opacity: 1;	
+	width:100%;
+	overflow: auto;
 }
 
-.contentOpen {
-	opacity: 1;
-	width: 200px;
+body.noScroll {
+	position: fixed;
+	overflow: hidden;	
 }
 
 .bio {
@@ -526,8 +677,19 @@ a:visited {
 	margin-top: 20px;
 }
 
+.bioText .skills {
+	font-style: italic;
+	padding-top: 20px;
+}
+
+.bioText .skills span {
+	font-weight: bold;
+	color: #222222;
+}
+
 #workWrap {
-	width: 100%
+	width: 100%;
+	overflow: hidden;
 }
 
 .projectItem {
@@ -577,13 +739,15 @@ a:visited {
 	opacity: 1;
 }
 
+.projectLogo, .projectText {
+	-webkit-transition:all .30s ease-in-out;
+	-moz-transition:all .30s ease-in-out;
+	-o-transition:all .30s ease-in-out;
+	transition:all .30s ease-in-out;
+}
+
 .projectItem:hover .projectLogo, .projectItem:hover .projectText {
-	opacity:0;
-	
-	-webkit-transition:all .20s ease-in-out;
-	-moz-transition:all .20s ease-in-out;
-	-o-transition:all .20s ease-in-out;
-	transition:all .20s ease-in-out;
+	opacity:0;		
 }
 
 .projectThumb img {
@@ -592,8 +756,21 @@ a:visited {
 }
 
 
+#workHistory {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
 
-
+#workHistory h1.title {
+	font-size: 34px;
+	line-height: 39px;
+	letter-spacing: 0.025em;
+	color: #4d4d4d; 
+	text-align: center;
+	padding: 96px 0;
+}
 
 /* ------------------------Start external Styling---------------------- */
 

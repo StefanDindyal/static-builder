@@ -3,8 +3,8 @@
 <head>
 <title>E-VEL | Work by Eddie Velez</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,700italic,300italic' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Roboto:400,300,700,700italic,300italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="style.css"/>
 </head>
 <body>
@@ -43,12 +43,15 @@
 						</div>
 						<div class="bioText">
 							Currently Art Directing &amp; Designing for projects involving sports, music &amp;lifestyle. I enjoy quality experiences as much as i enjoy creating them. If you'd like to chat about anything from User Experience to Front End Prototyping to our mutual love for <a href="http://google.com">this</a>, feel free to message me <a href="mailto:eddie@e-vel.com">here</a>
+							<div class="skills">
+								Som of my skills: <span>This thing</span>, <span>This thing</span>, <span>This thing as well</span>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div id="workWrap"> <!-- OPEN workWrap -->
 					<div class="projectItem clearfix"> <!-- OPEN projecItem -->
-						<a href="projectSample.html" class="projectLink">
+						<a href="ajax/project1/template.html" class="projectLink">
 							<div class="projectInfo">
 								<img class="projectLogo" src="images/shootdigital/projectLogo.png" alt="" />
 								<div class="projectText">
@@ -66,7 +69,7 @@
 						</a>
 					</div> <!-- CLOSE projecItem -->				
 					<div class="projectItem clearfix"> <!-- OPEN projecItem -->
-						<a href="projectSample.html" class="projectLink">
+						<a href="ajax/project1/template.html" class="projectLink">
 							<div class="projectInfo">
 								<img class="projectLogo" src="images/omega3beef/projectLogo.png" alt="" />
 								<div class="projectText">
@@ -85,7 +88,7 @@
 					</div> <!-- CLOSE projecItem -->
 				
 					<div class="projectItem clearfix"> <!-- OPEN projecItem -->
-						<a href="projectSample.html" class="projectLink">
+						<a href="ajax/project1/template.html" class="projectLink">
 							<div class="projectInfo">
 								<img class="projectLogo" src="images/shootdigital/projectLogo.png" alt="" />
 								<div class="projectText">
@@ -104,7 +107,7 @@
 					</div> <!-- CLOSE projecItem -->
 				
 					<div class="projectItem clearfix"> <!-- OPEN projecItem -->
-						<a href="projectSample.html" class="projectLink">
+						<a href="ajax/project1/template.html" class="projectLink">
 							<div class="projectInfo">
 								<img class="projectLogo" src="images/shootdigital/projectLogo.png" alt="" />
 								<div class="projectText">
@@ -123,7 +126,7 @@
 					</div> <!-- CLOSE projecItem -->
 					
 					<div class="projectItem clearfix"> <!-- OPEN projecItem -->
-						<a href="projectSample.html" class="projectLink">
+						<a href="ajax/project1/template.html" class="projectLink">
 							<div class="projectInfo">
 								<img class="projectLogo" src="images/shootdigital/projectLogo.png" alt="" />
 								<div class="projectText">
@@ -142,7 +145,7 @@
 					</div> <!-- CLOSE projecItem -->
 					
 					<div class="projectItem clearfix"> <!-- OPEN projecItem -->
-						<a href="projectSample.html" class="projectLink">
+						<a href="ajax/project1/template.html" class="projectLink">
 							<div class="projectInfo">
 								<img class="projectLogo" src="images/shootdigital/projectLogo.png" alt="" />
 								<div class="projectText">
@@ -160,65 +163,74 @@
 						</a>
 					</div> <!-- CLOSE projecItem -->
 				</div>	<!-- CLOSE work wrap -->
+				<div id="workHistory">
+					<h1 class="title">Work History</h1>
+				</div>
 			</div>   <!-- CLOSE home wrap -->
 		</div>   <!-- CLOSE home container -->
 	</div>   <!-- CLOSE main wrap -->
 <script src="js/jquery-1.10.2.min.js"></script>
-<script type="text/javascript" src="//use.typekit.net/sno1vfa.js"></script>
-<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+<!-- <script type="text/javascript" src="//use.typekit.net/sno1vfa.js"></script> -->
+<!-- <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
 <script type="text/javascript">
 $(document).ready(function() {
   	// select all the links with class="lnk", when one of them is clicked, get its "href" value
   	// adds a "loading..." notification, load the content from that URL and
   	// place only the paragraph which is in the #cnt into the tag with id="content"
-	$('a.projectLink').click(function(e) {
+	$('a.projectLink').on('click', function(e) {		
 		var url = $(this).attr('href') + ' #cnt';
 		var content = $('#content');
 		console.log(url);
-			$('#content .loadTarget').load(url, function(){
+		$('#content .loadTarget').load(url, function(){
 			content.removeClass('contentClose').addClass('contentOpen');    
-			});
-			$("a.closeProject").css("top","0");
-		    e.preventDefault();
+		});
+		$("a.closeProject").css("top","0");
+		$('body').addClass('noScroll');
+		e.preventDefault();
 	});
-    $( "a.closeProject" ).click(function(close) {
-        close.preventDefault();
-        var url = $(this).attr('href');
+    $( "a.closeProject" ).on('click', function(e) {
         var content = $('#content');
-        $(this).css("top", "-100px");
-        $('.loadTarget').fadeTo( "normal", 0, function() {
-            $('.loadTarget').html('');
-            content.removeClass('contentOpen').addClass('contentClose');
-        });
-    });  
-    $(window).scroll(function () {
-        var mainWrap = $('#mainWrap');
-        var introContainer = $('.introContainer');
-        var introText = $('#introText');
-        var body = $('body');
-		var dropInfo = $('#dropInfo');
-        if ($(this).scrollTop() > 50) {
+        $(this).css("top", "-100px");                		
+		content.removeClass('contentOpen').addClass('contentClose').delay(300).queue(function(){
+    		$('.loadTarget').empty().dequeue();
+		});
+		$('body').removeClass('noScroll');
+        e.preventDefault();
+    });
+    var mainWrap = $('#mainWrap'),
+    	introContainer = $('.introContainer'),
+    	introText = $('#introText'),
+    	body = $('body'),
+		dropInfo = $('#dropInfo');
+	// Fire when Dom is ready
+	scrollTop();    
+    $(window).scroll(function () {        
+    	// Fire when Scrolling
+		scrollTop(); 
+    });
+    function scrollTop(){
+    	var top = $(window).scrollTop();
+    	if ( top > 50 ) {
             mainWrap.removeClass('mainDown').addClass('mainUp');
             introContainer.addClass('introUp').removeClass('introDown');
             introText.removeClass('reveal').addClass('hide');
             dropInfo.removeClass('dropDown').addClass('dropUp');
             body.css( "background", "white" );
 
-        }
-        if ($(this).scrollTop() < 50) {
+        } if ( top < 50 ) {
             mainWrap.removeClass('mainUp').addClass('mainDown');
             introContainer.removeClass('introUp').addClass('introDown');
             introText.removeClass('hide').addClass('reveal');
             dropInfo.removeClass('dropUp').addClass('dropDown');
             body.css( "background", "black" );
         } 
-    });
-    $( "#menuBurger" ).click(function() {
+    }
+    $( "#menuBurger" ).on('click', function() {
 		var dropInfo = $('#dropInfo');
 		var menuBurger = $('#menuBurger');
 		if ($('#dropInfo').hasClass('dropClose')) {
-    	dropInfo.addClass('dropOpen');
-    	dropInfo.removeClass('dropClose');
+    		dropInfo.addClass('dropOpen');
+    		dropInfo.removeClass('dropClose');
 		}
 		else {
 			dropInfo.addClass('dropClose');
