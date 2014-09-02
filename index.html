@@ -6,14 +6,24 @@
 <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Roboto:400,300,700,700italic,300italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="style.css"/>
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/scripts.js"></script>
+<script type="text/javascript" src="//use.typekit.net/sno1vfa.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-	<div id="dropInfo" class="dropDown dropClose">
+	<div id="dropInfo" class="desk dropDown dropClose">
 		<div id="menuBurger">
 			<div class="burgerBar" id="bBar1"></div>
 			<div class="burgerBar" id="bBar2"></div>
 			<div class="burgerBar" id="bBar3"></div>
 		</div>
+		<ul id="nav">
+			<li><a href="#bio" class="bio">Bio</a></li>
+			<li><a href="#workWrap" class="work">Work</a></li>
+			<li><a href="#workHistory" class="history">History</a></li>
+			<li><a href="#contactMe" class="contact">Contact</a></li>
+		</ul>
 	</div>	
 	<div id="intro">
 		<div class="introContainer introDown">
@@ -34,7 +44,7 @@
 	<div id="mainWrap" class="mainDown">
 		<div id="homeWrap" class="clearfix mainDown">
 			<div class="homeContainer">
-				<div class="bio">
+				<div id="bio">
 					<div class="bioContainer">
 						<div class="bioTitleContainer">
 							<span id="bioTitle">
@@ -165,79 +175,65 @@
 				</div>	<!-- CLOSE work wrap -->
 				<div id="workHistory">
 					<h1 class="title">Work History</h1>
+					<div class="cell">
+						<div class="left">
+							<h2>Title of Position</h2>
+							<h3>Company Here</h3>
+							<h4>Time - Time</h4>
+						</div>
+						<div class="right">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<ul>
+								<li>Stuff</li>
+								<li>Stuff</li>
+								<li>Stuff</li>
+								<li>Stuff</li>
+							</ul>
+						</div>
+					</div>
+					<div class="cell">
+						<div class="left">
+							<h2>Title of Position</h2>
+							<h3>Company Here</h3>
+							<h4>Time - Time</h4>
+						</div>
+						<div class="right">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<ul>
+								<li>Stuff</li>
+								<li>Stuff</li>
+								<li>Stuff</li>
+								<li>Stuff</li>
+							</ul>
+						</div>
+					</div>
+					<div class="cell">
+						<div class="left">
+							<h2>Title of Position</h2>
+							<h3>Company Here</h3>
+							<h4>Time - Time</h4>
+						</div>
+						<div class="right">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<ul>
+								<li>Stuff</li>
+								<li>Stuff</li>
+								<li>Stuff</li>
+								<li>Stuff</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="contactMe">
+					<div class="email">Contact me: <a href="mailto:eddie@e-vel.com">eddie@e-vel.com</a></div>
+					<ul class="social">
+						<li><a href="#" target="_blank" class="fb">f</a></li>
+						<li><a href="#" target="_blank" class="tr">t</a></li>
+						<li><a href="#" target="_blank" class="in">i</a></li>
+					</ul>
 				</div>
 			</div>   <!-- CLOSE home wrap -->
 		</div>   <!-- CLOSE home container -->
 	</div>   <!-- CLOSE main wrap -->
-<script src="js/jquery-1.10.2.min.js"></script>
-<!-- <script type="text/javascript" src="//use.typekit.net/sno1vfa.js"></script> -->
-<!-- <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
-<script type="text/javascript">
-$(document).ready(function() {
-  	// select all the links with class="lnk", when one of them is clicked, get its "href" value
-  	// adds a "loading..." notification, load the content from that URL and
-  	// place only the paragraph which is in the #cnt into the tag with id="content"
-	$('a.projectLink').on('click', function(e) {		
-		var url = $(this).attr('href') + ' #cnt';
-		var content = $('#content');
-		console.log(url);
-		$('#content .loadTarget').load(url, function(){
-			content.removeClass('contentClose').addClass('contentOpen');    
-		});
-		$("a.closeProject").css("top","0");
-		$('body').addClass('noScroll');
-		e.preventDefault();
-	});
-    $( "a.closeProject" ).on('click', function(e) {
-        var content = $('#content');
-        $(this).css("top", "-100px");                		
-		content.removeClass('contentOpen').addClass('contentClose').delay(300).queue(function(){
-    		$('.loadTarget').empty().dequeue();
-		});
-		$('body').removeClass('noScroll');
-        e.preventDefault();
-    });
-    var mainWrap = $('#mainWrap'),
-    	introContainer = $('.introContainer'),
-    	introText = $('#introText'),
-    	body = $('body'),
-		dropInfo = $('#dropInfo');
-	// Fire when Dom is ready
-	scrollTop();    
-    $(window).scroll(function () {        
-    	// Fire when Scrolling
-		scrollTop(); 
-    });
-    function scrollTop(){
-    	var top = $(window).scrollTop();
-    	if ( top > 50 ) {
-            mainWrap.removeClass('mainDown').addClass('mainUp');
-            introContainer.addClass('introUp').removeClass('introDown');
-            introText.removeClass('reveal').addClass('hide');
-            dropInfo.removeClass('dropDown').addClass('dropUp');
-            body.css( "background", "white" );
-
-        } if ( top < 50 ) {
-            mainWrap.removeClass('mainUp').addClass('mainDown');
-            introContainer.removeClass('introUp').addClass('introDown');
-            introText.removeClass('hide').addClass('reveal');
-            dropInfo.removeClass('dropUp').addClass('dropDown');
-            body.css( "background", "black" );
-        } 
-    }
-    $( "#menuBurger" ).on('click', function() {
-		var dropInfo = $('#dropInfo');
-		var menuBurger = $('#menuBurger');
-		if ($('#dropInfo').hasClass('dropClose')) {
-    		dropInfo.addClass('dropOpen');
-    		dropInfo.removeClass('dropClose');
-		}
-		else {
-			dropInfo.addClass('dropClose');
-    		dropInfo.removeClass('dropOpen');
-		}
-	});
-});
-</script>
 </body>
 </html>

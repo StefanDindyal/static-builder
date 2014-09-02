@@ -47,6 +47,17 @@ table {
 	border-spacing: 0;
 }
 
+@font-face {
+	font-family: 'wordpress_surface_rgenerator';
+	src:url('fonts/wordpress_surface_rgenerator.eot');
+	src:url('fonts/wordpress_surface_rgenerator.eot?#iefix') format('embedded-opentype'),
+		url('fonts/wordpress_surface_rgenerator.woff') format('woff'),
+		url('fonts/wordpress_surface_rgenerator.ttf') format('truetype'),
+		url('fonts/wordpress_surface_rgenerator.svg#wordpress_surface_rgenerator') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 .clearfix:after {
 	content: ".";
 	display: block;
@@ -89,11 +100,14 @@ body, html {
 }
 
 body {
-	background: white;
 	font-family: 'Roboto', sans-serif;
 	color: #222222;
 	height: 100%;
-	background: black center top;
+	background: #000;
+}
+
+body.white {
+	background: #fff;
 }
 
 a {
@@ -197,6 +211,7 @@ a:visited {
 
 #mainWrap {
 	position: relative;
+	background: #fff;
 }
 
 #homeWrap {
@@ -211,16 +226,6 @@ a:visited {
 	width: 100%;
 	max-width: 1200px;
 	margin: 0 auto
-}
-
-.mainDown {
-	bottom: 5%;
-
-}
-
-.mainUp {
-	bottom: 45%;
-
 }
 
 #dropInfo {
@@ -246,60 +251,58 @@ a:visited {
 
 #menuBurger {
 	display: block;
-	width: 44px;
-	height: 30px;
+	width: 74px;
 	margin-bottom:10px;
 	position: absolute;
 	left: 50%;
-	margin-left: -22px;
-	padding: 4px;
+	margin-left: -37px;
+	padding: 20px 0 10px;
+	top: 80px;
 	z-index: 98;
+}
+#menuBurger .burgerBar {
+	width: 34px;
+	margin: 2px auto;
 }
 
 #menuBurger:hover {
 	cursor: pointer
 }
 
-.dropUp #menuBurger {	
-	-webkit-animation:burgerDrop .8s 1;
-	-webkit-animation-fill-mode: forwards;
-	-moz-animation:burgerDrop .8s 1;
-	-moz-animation-fill-mode: forwards;
-	animation:burgerDrop .8s 1;
-    animation-fill-mode: forwards;
+.dropOpen #menuBurger {
+	opacity: 0;
 }
 
-	@-webkit-keyframes burgerDrop
-		{
-			from   {top:-600px}
-			95%  {top: 100px;}
-			to {top:80px;}
-		}
-
-	@-moz-keyframes burgerDrop
-		{
-			from   {top:-600px}
-			95%  {top: 100px;}
-			to {top:80px;}
-		}
-
-	@keyframes burgerDrop
-		{
-			from   {margin-bottom:600px;}
-			90%  {margin-bottom:-30px;}
-			to {margin-bottom:-5px;}
-		}
-
-.burgerBar {
-	margin: 2px auto;
+#nav {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	font-size: 0;
+	line-height: 0;
+	z-index: 99;
 }
 
-#bBar2 {
-	float: left;
+#nav li {
+	display: inline-block;
+	font-family: 'adriane';
+	font-size: 16px;
+	line-height: 17px;
+	letter-spacing: 0.045em;
+	font-weight: bold;
+	font-style: italic;
+	margin: 0 35px;
+	padding: 0 0 22px;
 }
 
-#bBar3 {
-	float: right;
+#nav li a {
+	color: #777;
+}
+
+#nav li a:hover, #nav li a.active {
+	color: #4d4d4d;
+	font-size: 19px;
 }
 
 .dropUp .burgerBar {
@@ -310,257 +313,6 @@ a:visited {
 	position: relative;
 	margin-top: 2px;
 }
-
-#menuBurger:hover #bBar1 {
-	width: 32px;
-}
-
-#menuBurger #bBar2 {		
-	-webkit-animation:rotateLout .3s 1;
-	-webkit-animation-fill-mode: forwards;
-	-moz-animation:rotateLout .3s 1;
-    -moz-animation-fill-mode: forwards;
-    animation:rotateLout .3s 1;
-    animation-fill-mode: forwards;
-}
-
-	@-webkit-keyframes rotateLout
-		{
-			from	{
-					transform:rotate(45deg);
-					-ms-transform:rotate(45deg); 
-					-webkit-transform:rotate(45deg);
-					width: 60%;
-					}
-					
-			to	{
-					transform:rotate(0deg);
-					-ms-transform:rotate(0deg); 
-					-webkit-transform:rotate(0deg);
-					width: 100%;
-					}
-		}
-
-	@-moz-keyframes rotateLout
-		{
-			from	{
-					transform:rotate(45deg);
-					-ms-transform:rotate(45deg); 
-					-webkit-transform:rotate(45deg);
-					width: 60%;
-					}
-					
-			to	{
-					transform:rotate(0deg);
-					-ms-transform:rotate(0deg); 
-					-webkit-transform:rotate(0deg);
-					width: 100%;
-					}
-		}
-
-	@keyframes rotateLout
-		{
-			from	{
-					transform:rotate(45deg);
-					-ms-transform:rotate(45deg); 
-					-webkit-transform:rotate(45deg);
-					width: 60%;
-					}
-					
-			to	{
-					transform:rotate(0deg);
-					-ms-transform:rotate(0deg); 
-					-webkit-transform:rotate(0deg);
-					width: 100%;
-					}
-		}
-
-#menuBurger:hover #bBar2 {		
-	-webkit-animation:rotateL .3s 1;
-	-webkit-animation-fill-mode: forwards;
-	-moz-animation:rotateL .3s 1;
-    -mozanimation-fill-mode: forwards;
-    animation:rotateL .3s 1;
-    animation-fill-mode: forwards;
-}
-
-	@-webkit-keyframes rotateL
-		{
-			from	{
-					transform:rotate(0deg);
-					-ms-transform:rotate(0deg); 
-					-webkit-transform:rotate(0deg);
-					width: 100%;
-					}
-					
-			to	{
-					transform:rotate(45deg);
-					-ms-transform:rotate(45deg); 
-					-webkit-transform:rotate(45deg);
-					width: 60%;
-					}
-		}
-
-	@-moz-keyframes rotateL
-		{
-			from	{
-					transform:rotate(0deg);
-					-ms-transform:rotate(0deg); 
-					-webkit-transform:rotate(0deg);
-					width: 100%;
-					}
-					
-			to	{
-					transform:rotate(45deg);
-					-ms-transform:rotate(45deg); 
-					-webkit-transform:rotate(45deg);
-					width: 60%;
-					}
-		}
-
-	@keyframes rotateL
-		{
-			from	{
-					transform:rotate(0deg);
-					-ms-transform:rotate(0deg); 
-					-webkit-transform:rotate(0deg);
-					width: 100%;
-					}
-					
-			to	{
-					transform:rotate(45deg);
-					-ms-transform:rotate(45deg); 
-					-webkit-transform:rotate(45deg);
-					width: 60%;
-					}
-		}
-		
-#menuBurger #bBar3 {		
-	-webkit-animation:rotateRout .4s 1;
-	-webkit-animation-fill-mode: forwards;
-	-moz-animation:rotateRout .4s 1;
-    -moz-animation-fill-mode: forwards;
-    animation:rotateRout .4s 1;
-    animation-fill-mode: forwards;
-}
-
-	@-webkit-keyframes rotateRout
-		{
-			from	{
-					transform:rotate(-45deg);
-					-ms-transform:rotate(-45deg); 
-					-webkit-transform:rotate(-45deg);
-					width: 60%;
-					}
-					
-			to	{
-					transform:rotate(0deg);
-					-ms-transform:rotate(0deg); 
-					-webkit-transform:rotate(0deg);
-					width: 100%;
-					margin-top: 2px;
-					}
-		}
-
-	@-moz-keyframes rotateRout
-		{
-			from	{
-					transform:rotate(-45deg);
-					-ms-transform:rotate(-45deg); 
-					-webkit-transform:rotate(-45deg);
-					width: 60%;
-					}
-					
-			to	{
-					transform:rotate(0deg);
-					-ms-transform:rotate(0deg); 
-					-webkit-transform:rotate(0deg);
-					width: 100%;
-					margin-top: 2px;
-					}
-		}
-
-	@keyframes rotateRout
-		{
-			from	{
-					transform:rotate(-45deg);
-					-ms-transform:rotate(-45deg); 
-					-webkit-transform:rotate(-45deg);
-					width: 60%;
-					}
-					
-			to	{
-					transform:rotate(0deg);
-					-ms-transform:rotate(0deg); 
-					-webkit-transform:rotate(0deg);
-					width: 100%;
-					margin-top: 2px;
-					}
-		}
-		
-
-#menuBurger:hover #bBar3 {		
-	-webkit-animation:rotateR .4s 1;
-	-webkit-animation-fill-mode: forwards;
-	-moz-animation:rotateR .4s 1;
-    -moz-animation-fill-mode: forwards;
-    animation:rotateR .4s 1;
-    animation-fill-mode: forwards;
-}
-
-	@-webkit-keyframes rotateR
-		{
-			from	{
-					transform:rotate(0deg);
-					-ms-transform:rotate(0deg); 
-					-webkit-transform:rotate(0deg);
-					width: 100%;
-					}
-					
-			to	{
-					transform:rotate(-45deg);
-					-ms-transform:rotate(-45deg); 
-					-webkit-transform:rotate(-45deg);
-					width: 60%;
-					margin-top: -6px;
-					}
-		}
-
-	@-moz-keyframes rotateR
-		{
-			from	{
-					transform:rotate(0deg);
-					-ms-transform:rotate(0deg); 
-					-webkit-transform:rotate(0deg);
-					width: 100%;
-					}
-					
-			to	{
-					transform:rotate(-45deg);
-					-ms-transform:rotate(-45deg); 
-					-webkit-transform:rotate(-45deg);
-					width: 60%;
-					margin-top: -6px;
-					}
-		}
-
-	@keyframes rotateR
-		{
-			from	{
-					transform:rotate(0deg);
-					-ms-transform:rotate(0deg); 
-					-webkit-transform:rotate(0deg);
-					width: 100%;
-					}
-					
-			to	{
-					transform:rotate(-45deg);
-					-ms-transform:rotate(-45deg); 
-					-webkit-transform:rotate(-45deg);
-					width: 60%;
-					margin-top: -6px;
-					}
-		}
 
 .closeProject {
 	/*background: #434343 url("images/close.png") no-repeat 12px 9px;*/
@@ -604,7 +356,7 @@ padding-top: 30px;
 	left: 0;
 	top: 0;
 	color: #222222;
-	background: white;
+	background: #fff;
 	text-align: center;
 	overflow: hidden;
 	width:0;
@@ -623,15 +375,14 @@ padding-top: 30px;
 	overflow: auto;
 }
 
-body.noScroll {
-	position: fixed;
+body.noScroll {	
 	overflow: hidden;	
 }
 
-.bio {
+#bio {
 	padding: 1%;
 	width: 100%;
-	margin-bottom: 300px;
+	padding-bottom: 300px;
 	display: inline-block;
 }
 
@@ -672,14 +423,15 @@ body.noScroll {
 	float: right;
 	width: 100%;
 	padding-left:260px; 
-	position: absolute;
-	top: 211px;
-	margin-top: 20px;
+	position: relative;
+	top: 0px;
+	margin-top: -60px;
 }
 
 .bioText .skills {
 	font-style: italic;
 	padding-top: 20px;
+	font-family: "adriane";
 }
 
 .bioText .skills span {
@@ -770,6 +522,141 @@ body.noScroll {
 	color: #4d4d4d; 
 	text-align: center;
 	padding: 96px 0;
+	font-family: 'adriane';
+	font-weight: bold;
+	font-style: italic;
+}
+
+#workHistory .cell {
+	overflow: hidden;
+	position: relative;
+	padding-bottom: 30px;
+}
+
+#workHistory .left,
+#workHistory .right {
+	padding: 10px;
+	width: 50%;
+	float: left;
+}
+
+#workHistory .left {
+	text-align: right;
+	font-family: 'adriane';
+	font-style: italic;
+	font-weight: bold;
+	letter-spacing: 0.025em;
+}
+
+#workHistory .right {
+	text-align: left;
+	font-family: 'nimbus-sans';
+	font-size: 18px;
+	line-height: 25px;
+	color: #777777;
+	padding-top: 42px;
+}
+
+#workHistory .right p {
+	margin-bottom: 16px;
+}
+
+#workHistory .right ul {	
+	font-family: 'nimbus-sans', sans-serif;
+	font-size: 19px;
+	line-height: 21px;
+	color: #4d4d4d;
+	list-style: disc;
+	padding-left: 40px;
+}
+
+#workHistory .right ul li {
+	margin-bottom: 10px;
+}
+
+#workHistory .left h2 {
+	font-size: 20px;
+	line-height: 39px;	
+	color: #4d4d4d;
+}
+
+#workHistory .left h3 {
+	font-size: 29px;
+	line-height: 39px;	
+	color: #353535;
+}
+
+#workHistory .left h4 {
+	font-size: 16px;
+	line-height: 39px;	
+	color: #777777;
+}
+
+#contactMe {
+	position: relative;
+	padding: 80px 10px 118px;
+	border-top: 4px solid #4d4d4d;
+	text-align: center;
+}
+
+#contactMe .email {
+	font-family: 'adriane';
+	font-weight: bold;
+	font-style: italic;
+	font-size: 16px;
+	line-height: 18px;
+	letter-spacing: 0.045em;
+	color: #717171;
+	margin-bottom: 25px;
+}
+
+#contactMe .email a {
+	color: #2f2f2f;
+}
+
+#contactMe .social {
+	text-align: center;
+	font-size: 0;
+	line-height: 0;
+	padding: 5px 0;
+	font-family: 'wordpress_surface_rgenerator';
+}
+
+#contactMe .social li {
+	font-size: 32px;
+	line-height: 32px;
+	margin: 0 10px;
+	display: inline-block;
+}
+
+#contactMe .social li a {
+	display: block;
+	width: 28px;
+	height: 28px;
+	text-indent: -999em;
+	overflow: hidden;
+	background: url(images/social-icons.png) top left no-repeat;
+}
+
+#contactMe .social li a.tr {
+	background-position: top center;
+	width: 32px;
+}
+
+#contactMe .social li a.in {
+	background-position: top right;
+}
+
+#contactMe .social li a:hover {
+	background-position: bottom left;
+}
+
+#contactMe .social li a.tr:hover {
+	background-position: bottom center;
+}
+
+#contactMe .social li a.in:hover {
+	background-position: bottom right;
 }
 
 /* ------------------------Start external Styling---------------------- */
@@ -865,7 +752,7 @@ body.noScroll {
 		font-size: 4em;
 	}
 	
-	.bio {
+	#bio {
 		margin-bottom: 150px;
 	}
 	
