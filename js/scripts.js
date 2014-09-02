@@ -40,10 +40,11 @@ $(document).ready(function() {
         var workY = $('#workWrap').offset().top;
         var histY = $('#workHistory').offset().top;
         var contactY = $('#contactMe').offset().top;
-        var bio = bioY - ((workY - bioY) / 2);
-        var work = workY - ((histY - workY) / 2);
+        var bio = bioY - 220;
+        var work = workY - 100;
         var hist = histY - ((contactY - histY) /2);
-        var contact = contactY - 545;        
+        var contact = contactY - 545;
+        console.log(bio+' '+work+' '+scroll);
         $('#nav li a').removeClass('active');        
         if(scroll >= 0 && scroll < bio){
             $('#nav li a').removeClass('active');                                   
@@ -52,8 +53,7 @@ $(document).ready(function() {
             $('#nav li a.bio').addClass('active');            
         }
         else if(scroll >= work && scroll < hist ){
-            $('#nav li a.work').addClass('active');
-            console.log(bio+' '+work+' '+scroll);
+            $('#nav li a.work').addClass('active');            
         }
         else if(scroll >= hist && scroll < contact){ 
             $('#nav li a.history').addClass('active');
@@ -104,7 +104,7 @@ $(document).ready(function() {
         e.preventDefault();
         var select = $(this).attr('href');
         if(select == '#bio'){
-            var destination = ($(select).offset().top) - 120;        
+            var destination = ($(select).offset().top) - 140;        
         } else {
             var destination = $(select).offset().top;        
         }        
