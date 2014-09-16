@@ -2,13 +2,26 @@ $(document).ready(function() {
   	// select all the links with class='lnk', when one of them is clicked, get its 'href' value
   	// adds a 'loading...' notification, load the content from that URL and
   	// place only the paragraph which is in the #cnt into the tag with id='content'
+    var controller = $.superscrollorama({
+            triggerAtCenter: false,
+            playoutAnimations: true
+        });
+
+    controller.addTween('.projectItem', 
+        TweenMax.from($('.projectItem'),.5,{
+            css:{opacity:0}}),
+            0, // scroll duration of tween (0 means autoplay)
+            -180); // offset the start of the tween by 200 pixels
+
     var width = $(window).width();
 	$('a.projectLink').on('click', function(e) {		
 		var url = $(this).attr('href') + ' #cnt';
 		var content = $('#content');
 		console.log(url);
 		$('#content .loadTarget').load(url, function(){
-			content.removeClass('contentClose').addClass('contentOpen');    
+			content.fadeIn({
+                duration: 330
+            });
 		});
 		$('a.closeProject').css('top','0');
 		$('body').addClass('noScroll');
@@ -16,10 +29,10 @@ $(document).ready(function() {
 	});
     $('a.closeProject').on('click', function(e) {
         var content = $('#content');
-        $(this).css('top', '-100px');                		
-		content.removeClass('contentOpen').addClass('contentClose').delay(300).queue(function(){
-    		$('.loadTarget').empty().dequeue();
-		});
+        $(this).css('top', '-100px');              		
+		content.fadeOut(330, function(){
+            $('.loadTarget').empty();
+        });
 		$('body').removeClass('noScroll');
         e.preventDefault();
     });
@@ -41,7 +54,7 @@ $(document).ready(function() {
         var histY = $('#workHistory').offset().top;
         var contactY = $('#contactMe').offset().top;
         var bio = bioY - 220;
-        var work = workY - 100;
+        var work = workY - ((histY - workY) /2);
         var hist = histY - ((contactY - histY) /2);
         var contact = contactY - 545;
         console.log(bio+' '+work+' '+scroll);
@@ -106,7 +119,7 @@ $(document).ready(function() {
         if(select == '#bio'){
             var destination = ($(select).offset().top) - 140;        
         } else {
-            var destination = $(select).offset().top;        
+            var destination = ($(select).offset().top) - 140;        
         }        
         $("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 500);        
     });

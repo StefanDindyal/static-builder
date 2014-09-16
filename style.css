@@ -83,6 +83,13 @@ a, div, body, .mainLogo, .mainLogo2, .introUp {
 	transition: .33s ease-in-out;
 }
 
+#content {
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition: none;	
+}
+
 #menuBurger {
 	-webkit-transition:all .30s ease-in-out;
 	-moz-transition:all .30s ease-in-out;
@@ -96,6 +103,8 @@ a, div, body, .mainLogo, .mainLogo2, .introUp {
 /* --------------------------Start Code---------------------- */
 
 body, html {
+	height: 100%;
+	width: 100%;
 }
 
 body {
@@ -128,8 +137,11 @@ a:visited {
 	width: 100%;
 	height: 100%;
 	position: relative;
-	top: auto;
 	text-align: center;
+}
+
+.white #intro {
+	height: 35%;
 }
 
 #introContainer {
@@ -209,7 +221,7 @@ a:visited {
 
 #mainWrap {
 	position: relative;	
-	padding-top: 65%;
+	/*padding-top: 65%;*/
 }
 
 .white #mainWrap {
@@ -244,7 +256,7 @@ a:visited {
 
 .dropUp {
 	height: 2px;
-	z-index: 2;
+	z-index: 98;
 }
 
 .dropOpen {
@@ -321,7 +333,8 @@ a:visited {
 	background-color: #434343;
 	position: fixed;
 	top: -80px;
-	right: 20px;
+	left: 50%;
+	margin-left: -40px;
 	width: 80px;
 	height: 80px;
 	text-align: center;
@@ -360,21 +373,15 @@ a:visited {
 	color: #222222;
 	background: #fff;
 	text-align: center;
-	overflow: hidden;
-	width:0;
+	overflow: auto;
+	width:100%;
 	height: 100%;
 	z-index: 100;
-	opacity: 0;	
-	-webkit-transition:all .30s ease-in-out;
-	-moz-transition:all .30s ease-in-out;
-	-o-transition:all .30s ease-in-out;
-	transition:all .30s ease-in-out;
+	display: none;
 }
 
 #content.contentOpen {
-	opacity: 1;	
-	width:100%;
-	overflow: auto;
+	
 }
 
 body.noScroll {	
@@ -726,21 +733,25 @@ body.noScroll {
 	width: 100%;
 }
 
+/*#mainWrap.mainUp {
+		padding-top: 25%;
+	}*/
+
 /* -----------------------End external Styling------------------------ */
 
 @media all and (max-width: 900px){
 
 	#mainWrap {
-		padding-top: 135%;		
+		/*padding-top: 135%;		*/
 	}
 
-	.mainUp {
+	/*.mainUp {
 		bottom: -60%;
 	}
 	.introDown {
 		width: 90%;
 		margin: -40% -45%
-	}
+	}*/
 	
 	.bioText {
 		position: relative;
@@ -799,7 +810,13 @@ body.noScroll {
 @media all and (max-width: 600px){
 
 	#mainWrap {
-		padding-top: 130%;
+		/*padding-top: 130%;*/
 	}
 
+}
+
+@media all and (max-width: 360px){
+	#nav li {
+		margin: 0 15px;
+	}
 }
