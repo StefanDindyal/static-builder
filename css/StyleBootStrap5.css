@@ -1,0 +1,234 @@
+#cycler {
+	position: relative;
+	width: 100%;
+	height: 750px;
+}
+#cycler img {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+}
+.container-fluid {
+	padding: 0px;
+}
+.heroImage {
+	position: relative;
+}
+.fixedhead {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	z-index: 17;
+	
+}
+.shareicon a i {
+	color: #6D00A0;
+	margin: 8px;
+}
+
+#cycler img.active {
+	z-index: 3;
+}
+
+.appledPadding {
+	padding: 0;
+}
+.text-align {
+	text-align: center
+}
+.center {
+	float: none;
+	margin: 0 auto;
+}
+
+.shareicon {
+
+	width: 40px;
+	height: 40px;
+	border-radius: 35px;
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	background-color: #01d6a0;
+	margin: 0 5px 0 0;
+}
+
+.shareicon:hover {
+	background-color: #96fdce;
+}
+
+.shareicon a {
+	text-decoration: none;
+}
+
+#navbar a{
+	margin: 0px 0px 0px 60px;
+}
+.pageLinks li {
+	float: left;
+	margin: 16px;
+	color: #fff;
+}
+.pageLinks li a {
+	color: #fff;
+}
+.pageLinks li a:hover {
+	text-decoration: none;
+}
+.applyliststyle {
+	list-style: none;
+}
+#navHeader {
+	background-color: transparent;
+}
+.navBarLinks li {
+	list-style: none;
+	float: left;
+	margin: 20px 20px 20px 5px;
+}
+
+.navBarLinks li a {
+	color: #fff;
+	text-decoration: none;
+}
+.appTpMArgin{
+	z-index:9999;
+}
+
+.ElementRemove {
+	position: fixed;
+	top: 32px;
+	background-color: #00D0A0;
+	border: 0px none;
+	color: #FFF;
+	width: 150px;
+	height: 40px;
+	border-radius: 4px;
+	display: block;
+	right: 100px;
+	font-family: "Montserrat-Bold";
+	z-index: 9999999;
+}
+
+.head {
+	position: relative;
+	left: 0px;
+	z-index: 9999;
+	top: 0px;
+}
+
+.dekstopnone {
+	display: none;
+}
+
+footer {
+	text-align: center;
+}
+
+footer ul {
+	padding: 0px;
+	margin: 0px;
+}
+
+footer .firstul {
+	margin: 0px 0px 60px 0px auto;
+}
+
+.gonbsybutton {
+	height: 110px;
+	width: 110px;
+	border-radius: 55px;
+	display: inline-block;
+	text-align: center;
+	position: relative;
+	z-index:10;
+	font-family: "Montserrat-Bold";
+	font-size:0.9em;
+	background: linear-gradient(to bottom, #00DBB7 0%, #00BD7D 90%, #00BD7D 99%, #00BD7D 100%) repeat scroll 0% 0% transparent;
+}
+.gonbsybutton a {
+	color: #fff;
+	text-decoration: none;
+	position: absolute;
+	background: url(../images/down_arrow.png) 46px 50px no-repeat;
+	left: 0px;
+	display: table;
+	top: 25px;
+	padding-bottom: 27px;
+}
+.GoneBusyButton{
+	position: absolute;
+	top: 500px;
+	left: 46%;
+}
+.gonbsybutton:hover{
+	background: #89ffc4;
+}
+.ElementRemove:hover{
+	background-color: #97ffcb;
+}
+.SocialIcons {
+	margin: 25px 0 0 0;
+}
+.margintp {
+	margin: 20px 20px 0px;
+	float: right;
+	font-family: "Montserrat-Bold";
+}
+
+.setPositon {
+	position: relative;
+}
+
+.seconul {
+	margin: 20px auto;
+}
+.seconul li {
+	display: inline-block;
+	margin: 0 10px 0 18px;
+}
+.seconul li a {
+	text-decoration: none;
+	color: #fff;
+	font-size:1.125em;
+	font-family: "Montserrat-Regular";
+}
+
+.seconul > .appltliClass:before {
+	content: "";
+	display: list-item;
+	position: absolute;
+	color: #FFFFFF;
+	margin: 2px 0px 0px 2px;
+}
+
+.crossfadingText h2{
+				width: 50%;
+				color: #ffffff;
+				margin: auto;
+				color: #fff;
+				font-family: 'Enriqueta-Bold';
+				font-size: 3.875em;
+				line-height: 1.128;
+				text-align: center;
+				text-shadow: 0px 0px 15px rgba( 0, 1, 1,0.5  );
+				width: 60%;
+			}
+			.crossfadingText{
+				position: absolute;
+				top:250px;
+				z-index:3;
+				left: 0px;
+				right: 0px;
+			}
+			
+			
+				.fontsize{
+      		font-weight: bold;
+			padding: 6px;
+			font-size: 1.5em;    
+			  	}
+.fa-2x {
+    font-size: 1.6em !important;
+}

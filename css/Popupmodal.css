@@ -1,0 +1,319 @@
+/*modal header*/
+
+.modal-header header h1{
+	display: inline-block;
+	color: #fff;
+	font-size: 4em;
+	/*margin: -10px 0px 0px 80px;
+	padding: 19px 150px 15px 0px;*/
+	font-family:"Montserrat-Bold";
+	background:url(../images/Smilealex.png)310px no-repeat;
+	margin: -2% -2% -2% -2%;
+	padding: 4% 20% 2% 2%;
+	
+}
+.modal-header header{
+	background: #00cc99;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;
+	height: 100px;
+	margin:-15px;
+}
+
+.makepadding{
+	padding: 0px;
+}
+
+/* End of modal header*/
+.modal-body h2{
+	font-size:1.5em;
+	color: #609;
+	font-family:"Montserrat-Bold";
+	width: 80%;
+	margin: 1% auto;
+	line-height: 1.42875em;
+
+}
+.colcontent ul li{
+	color: #609;
+	/*font-size: 1.125em;*/
+	font-family: 'Montserrat-Regular';
+	line-height: 1.4444em;
+	margin:15px 0px 0px 0px;
+}
+ .listimg ul li{
+	list-style: outside url("../images/tick-mark.png") disc;
+	
+}
+.liststylenone ul li{
+	list-style:none;
+	
+}
+
+
+.rightpadding{
+	padding-right:20px;
+	width: 90%;
+	margin: 0% 7% auto;
+}
+.buttonsection{
+	padding:0px;
+}
+.buttonsection  li button{
+	/*width:300px;*/
+	height:35px;
+	font-family:"Montserrat-Bold";
+	color:#fff;
+}
+
+.borderleft{
+border-left:1px solid #00cc99;
+}
+
+
+/*modal width*/
+.modal-dialog {
+    width: 60%;
+    margin: 30px auto;
+}
+
+.modal-body p{
+	color:#6D00A0;
+	padding:0px 30px 0px 30px;
+	margin:16px 0px 0px 0px;
+}
+.modal-body span{
+	display:block;
+	color:#6D00A0;
+	font-family:"Montserrat-Bold";
+	font-size:1.75em;
+	
+}
+
+.inputWidth{
+	width:40%;
+	border:1px solid #00cc99;
+	display:inline;
+}
+.inputEmail{
+	width:80%;
+	margin:10px 0px;
+	border:1px solid #00cc99;
+	
+}
+.inputEmailred{
+	width:80%;
+	margin:10px 0px;
+	border:2px solid #ff6666;
+	background:#ffefef; 
+}
+.inputPass{
+	width:80%;
+	margin:0px 0px 10px 0px;
+	border:1px solid #00cc99;
+	
+}
+.modal-body input{
+	height:40px;
+	border-radius:6px;
+	text-align: left;
+	padding:0px 0px 0px 10px;
+	font-family: "Montserrat-Regular";
+}
+.createaccount{
+	background-color:#00CC99;
+	width:80%;
+	color:#fff;
+	font-family:"Montserrat-Bold";
+}
+.createaccount:hover{
+	color:#fff;
+}
+
+/*.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}*/
+
+.btn-facebook {
+    border-color:rgba(0,0,0,0);
+}
+.btn-twitter {
+    border-color: rgba(0, 0, 0, 0);
+}
+.btn-google-plus {
+    border-color: transparent;
+}
+.btn-github {
+    color: #FFF;
+    background-color: #999999;
+    border-color: rgba(0, 0, 0, 0);
+}
+
+.btn-social > :first-child {
+    width: 40px;
+    position: absolute;
+	left:0;
+	top: 0;
+	bottom: 0px;
+	width:15%;
+	line-height: 40px;
+	border-right: 1px solid #fff;
+	text-align: center;
+	font-size:2em;
+}
+.btn-social{
+	text-align:center;
+	width:80%;
+	height:40px;
+	display: inline-block;
+	line-height:2em;
+}
+
+.btn .font-btn {
+    border-radius: 6px;
+    /*font-size: 1.125em;*/
+}
+.paddinleft{
+	padding-left:0px;
+}
+.line_height55{
+	line-height:55px !important;
+}
+@media (max-width: 768px) {
+	.modal-content {
+	height:1100px;	
+	}
+	
+	
+		button.close {
+			color:#fff;
+			opacity:1;
+		}
+		
+	.modal-dialog {
+		width:80%;
+	}
+	.borderleft{
+		border:none;
+	}
+	.buttonsection li{
+		display:block;
+		font-family:"Montserrat-Bold";
+	}
+	.btn-social {
+    height: 60px;
+    /*width: 425px;*/
+    font-size:1.5em;
+}
+.btn-social > :first-child {
+    left: 9px;
+    top: 1px;
+    bottom: 0px;
+    font-size: 2em;
+    line-height: 60px;
+}
+
+.font_15{
+	font-size:1.5em !important;
+}
+.inputEmail,.inputPass,.btn-social,.createaccount{
+	width:100%;
+}
+
+
+.inputWidth {
+    width: 49%;
+}
+.line_height{
+	line-height:66px !important;
+}
+.modal-header header h1{
+	font-size: 3.5em;
+	padding: 6% 26% 2% 2%;
+	background: url("../images/Smilealex.png") no-repeat scroll 257px center transparent;
+}
+
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+	.modal-dialog {
+    width: 70%;
+    margin: 30px auto;
+}
+
+.modal-header h1 {
+    font-size: 2em;
+    margin: -43px 0px 0px;
+	padding: 70px 89px 10px 23px;	
+    
+}
+/*.inputEmail,.inputPass{
+	width:100%;
+}*/
+}
+@media (min-width: 320px) and (max-width: 480px) {
+	
+		button.close {
+    padding: 1% !important;
+    margin-top: -2px;
+    margin-right: -10px;
+    color: #fff;
+    opacity: 1;    
+}
+/*.modal-header header h1 {
+    font-size: 2em;
+    margin: -43px 0px 0px;
+	padding: 70px 89px 10px 23px;	
+     background: url("../images/smallresol.png") no-repeat scroll 161px 35px transparent;
+}*/
+.modal-header header{
+	height:60px;
+}
+
+.modal-header header h1 {
+    font-size: 2.5em;
+    padding: 6% 23% 2% 2%;
+    background: url("../images/Smilealex.png") no-repeat scroll 183px center / 25% auto transparent;
+}
+
+.modal-content{
+	height:1200px;
+}
+.btn-social {
+    height: 40px;
+    font-size: 1em;
+}
+
+.btn-social > :first-child {
+    position: absolute;
+    left: 3%;
+    top: -15%;
+    bottom: 0px;
+    width: 19%;
+    line-height: 49px;
+    border-right: 1px solid #FFF;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.inputWidth {
+    width: 100%;
+    margin:5% 0px 0px 0px;
+}
+.modal-body p {
+    padding: 0px;
+   
+}
+.modal-body h2{
+	width:95%;
+	margin:1% 5% auto;
+	font-size: 1.5em;
+}
+.rightpadding{
+	width:100%;
+	margin:0% auto;
+}
+}
+
+/*End here*/
+

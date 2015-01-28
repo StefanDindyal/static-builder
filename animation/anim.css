@@ -1,0 +1,197 @@
+/*Fonts*/
+@font-face {
+    font-family: 'Enriqueta-Bold';
+    src: url('../Fonts/Enriqueta-Bold.eot');
+    src: url('../Fonts/Enriqueta-Bold.eot?#iefix') format('embedded-opentype'), url('../Fonts/Enriqueta-Bold.woff') format('woff'), url('../Fonts/Enriqueta-Bold.ttf') format('truetype');
+}
+/*mods*/
+.hsContent {
+	height: 100%;
+}
+/*Animation CSS*/
+.anim {
+	position: relative;
+	overflow: hidden;
+}
+/*sign*/
+.anim.sign {
+	width: 202px;
+	height: 305px;
+	background: url(images/sandwich-baord.png) center no-repeat;
+	margin: 110px auto 0;
+	perspective: 200px;
+}
+.anim.sign .msg {
+	position: absolute;
+	top: 0;	
+	width: 100%;
+	height: 250px;
+	font-family: 'Enriqueta-Bold';
+	font-size: 22px;
+	line-height: 25px;
+	color: #fff;
+	padding: 55px 30px;
+}
+/*faces*/
+.anim.faces {	
+	width: 100%;
+	height: 100%;
+	margin: 0 auto 0;
+}
+.anim .face {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -105px;
+	margin-left: -104px;
+	width: 210px;
+	height: 208px;
+	z-index: 5;
+}
+.anim .face.euro {
+	background: url(images/faces/euro.png) center no-repeat;
+}
+.anim .face.afro {
+	background: url(images/faces/afro.png) center no-repeat;	
+}
+.anim .face.asian {
+	background: url(images/faces/asian.png) center no-repeat;
+}
+.anim .face.native {
+	background: url(images/faces/native.png) center no-repeat;
+}
+.anim.roles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+.anim .role {
+	position: absolute;
+	bottom: 50%;
+	left: 5px;	
+	width: 100%;
+	height: 420px;
+	margin-bottom: -195px;
+}
+.anim .role.carpenter {
+	background: url(images/roles/carpenter.png) center no-repeat;
+}
+.anim .role.chef {
+	background: url(images/roles/chef.png) center no-repeat;
+}
+.anim .role.coach {
+	background: url(images/roles/coach.png) center no-repeat;
+}
+.anim .role.librarian {
+	background: url(images/roles/librarian.png) center no-repeat;
+}
+.anim .role.stylist {
+	background: url(images/roles/stylist.png) center no-repeat;
+}
+/*basic and pro*/
+.anim.types {}
+.anim.types > h1 {
+	position: relative;
+	display: inline-block;
+	width: auto;
+}
+.anim.types .burst {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+.anim.types .burst .basic {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 70px;
+	height: 66px;
+	background: url(images/burst-basic.png) center no-repeat;
+}
+.anim.types .burst .pro {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 89px;
+	height: 82px;
+	background: url(images/burst-pro.png) center no-repeat;
+}
+/*carousel*/
+#slide-10 .anim.carousel {
+	width: 400px;
+	height: 200px;
+	margin: 0 auto 20px;
+	-webkit-transform-origin: top center;
+	transform-origin: center center;
+}
+#slide-10 .anim.carousel.sm {
+	width: 295px;
+	height: 165px;
+}
+.anim.carousel .icon {
+	position: absolute;
+	font-size: 80px;	
+}
+.anim.carousel .icon.a {
+	width:107px;
+	height:107px;
+	background: url(images/basic-icons/ball.png) center no-repeat;
+	position:absolute;
+	top:0px;
+	left:50px;	
+	/*top: 120px;
+	left: 150px;
+	transform: scale(1);
+	opacity: 1;*/
+}
+.anim.carousel .icon.b {
+	top: 120px;
+	left: 50px;	
+	opacity: 1;
+	transform: scale(0.8);
+}
+.anim.carousel .icon.c {
+	top: 120px;
+	left: 0px;	
+	opacity: 1;
+	transform: scale(0.6);
+}
+.anim.carousel .icon.d {
+	top: 100px;
+	left: 50px;	
+	opacity: 1;
+	transform: scale(0.4);
+}
+.anim.carousel .icon.e {
+	top: 80px;
+	left: 120px;	
+	opacity: 1;
+	transform: scale(0.2);
+}
+/*door*/
+.hsContent.doorCover {
+	position: relative;
+	overflow: hidden;
+}
+.anim.door {
+	float: right;
+	margin-right: 0;
+	width: 503px;
+	height: 650px;
+	background: url(images/door.jpg) top right no-repeat;
+}
+.anim.door .hanging {
+	position: absolute;
+	top: 50px;
+	right: 90px;
+	width: 163px;
+	height: 192px;
+	background: url(images/gb-hang.png) top center no-repeat;
+	-webkit-transform: rotate(-70deg);
+	transform: rotate(-70deg);
+	-webkit-transform-origin: top center;
+	transform-origin: top center;
+}
