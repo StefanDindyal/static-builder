@@ -148,7 +148,8 @@ jQuery(function($){
 	});
 	var icon = new TimelineMax({repeat:-1});
 
-	icon.to($('.carousel .icon.a'), 2, {bezier:[{x:100, y:100}, {x:0, y:200}, {x:-100, y:100}, {x:0, y:0}]/*bezier end*/, ease:Linear.easeNone});
+	TweenMax.fromTo($('.carousel.sm'),5, {rotationZ:0}, {rotationZ:360, transformOrigin:"50%, 50%, 00px"});
+	TweenMax.to($('.carousel .icon.a'),5, {rotationY:90,rotationZ:0, rotationX:0}, {rotationY:90,rotationZ:0,rotationX:0, transformOrigin:"50%, 50%"});
 	//both these tweens start at the same time
 	// icon.to(
 	// 	$('.carousel .icon.a'), 

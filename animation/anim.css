@@ -130,22 +130,29 @@
 #slide-10 .anim.carousel.sm {
 	width: 295px;
 	height: 165px;
+	position:relative;
+	-webkit-transform-style: preserve-3d; 
+	-webkit-animation-name: pathRotate; 
+	-webkit-animation-duration: 5s; 
+	-webkit-animation-iteration-count: infinite; 
+	-webkit-animation-timing-function: linear;
 }
 .anim.carousel .icon {
-	position: absolute;
-	font-size: 80px;	
+	position: absolute;	
 }
 .anim.carousel .icon.a {
 	width:107px;
 	height:107px;
 	background: url(images/basic-icons/ball.png) center no-repeat;
-	position:absolute;
-	top:0px;
-	left:50px;	
-	/*top: 120px;
-	left: 150px;
-	transform: scale(1);
-	opacity: 1;*/
+	position:absolute;	
+	top:-14px; 
+	left:50%; 
+	margin-left:-5px; 
+	width:50px;  
+	-webkit-animation-name: electronFix; 
+	-webkit-animation-duration: 5s; 
+	-webkit-animation-iteration-count: infinite; 
+	-webkit-animation-timing-function: linear;
 }
 .anim.carousel .icon.b {
 	top: 120px;
@@ -195,3 +202,12 @@
 	-webkit-transform-origin: top center;
 	transform-origin: top center;
 }
+/*Keyframes*/
+@-webkit-keyframes pathRotate { 
+	from { -webkit-transform: rotateZ(0deg);} 
+	to { -webkit-transform: rotateZ(360deg); } 
+} 
+@-webkit-keyframes electronFix { 
+	from { -webkit-transform: rotateX(90deg) rotateY(0deg); } 
+	to { -webkit-transform: rotateX(90deg) rotateY(-360deg);  }
+} 
