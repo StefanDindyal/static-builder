@@ -17,7 +17,7 @@
 .anim.sign {
 	width: 202px;
 	height: 305px;
-	background: url(images/sandwich-baord.png) center no-repeat;
+	background: url(images/sandwich-board.png) center no-repeat;
 	margin: 110px auto 0;
 	perspective: 200px;
 }
@@ -124,59 +124,71 @@
 	width: 400px;
 	height: 200px;
 	margin: 0 auto 20px;
-	-webkit-transform-origin: top center;
-	transform-origin: center center;
+	overflow: visible;
 }
-#slide-10 .anim.carousel.sm {
-	width: 295px;
-	height: 165px;
-	position:relative;
+#slide-10 .anim.carousel.sm {		
+	position:relative; 
+	width:295px; 
+	height:235px; 
+	margin:0 auto;
+	-webkit-perspective: 0;
 	-webkit-transform-style: preserve-3d; 
-	-webkit-animation-name: pathRotate; 
-	-webkit-animation-duration: 5s; 
-	-webkit-animation-iteration-count: infinite; 
-	-webkit-animation-timing-function: linear;
+	-webkit-transform: rotateX(70deg) rotateY(180deg);
+}
+#slide-10 .anim.carousel .path {
+	width:295px; 
+	height:235px; 
+	position:relative; 	
+	-webkit-transform-style: preserve-3d;	
 }
 .anim.carousel .icon {
 	position: absolute;	
 }
-.anim.carousel .icon.a {
-	width:107px;
-	height:107px;
-	background: url(images/basic-icons/ball.png) center no-repeat;
-	position:absolute;	
-	top:-14px; 
-	left:50%; 
-	margin-left:-5px; 
-	width:50px;  
-	-webkit-animation-name: electronFix; 
-	-webkit-animation-duration: 5s; 
-	-webkit-animation-iteration-count: infinite; 
-	-webkit-animation-timing-function: linear;
-}
-.anim.carousel .icon.b {
-	top: 120px;
-	left: 50px;	
+.anim.carousel.sm .icon.a {	
+	width:108px;
+	height:108px;	
+	background: url(images/basic-icons/ball.png) center no-repeat;	
+	top:127px; 
+	left:50%;
+	margin-left: -54px;
 	opacity: 1;
-	transform: scale(0.8);
+	transform: scale(1);	
 }
-.anim.carousel .icon.c {
-	top: 120px;
-	left: 0px;	
+.anim.carousel.sm .icon.b {
+	width:138px;
+	height:138px;	
+	background: url(images/basic-icons/cake.png) center no-repeat;	
+	top:50px; 
+	left:0;	
 	opacity: 1;
-	transform: scale(0.6);
+	transform: scale(1);	
 }
-.anim.carousel .icon.d {
-	top: 100px;
-	left: 50px;	
+.anim.carousel.sm .icon.c {
+	width:138px;
+	height:138px;	
+	background: url(images/basic-icons/concert.png) center no-repeat;	
+	top:0px; 
+	left:75px;
 	opacity: 1;
-	transform: scale(0.4);
+	transform: scale(1);	
 }
-.anim.carousel .icon.e {
-	top: 80px;
-	left: 120px;	
+.anim.carousel.sm .icon.d {
+	width:150px;
+	height:138px;	
+	background: url(images/basic-icons/picnic.png) center no-repeat;	
+	top:0px; 
+	left:140px;
 	opacity: 1;
-	transform: scale(0.2);
+	transform: scale(1);	
+}
+.anim.carousel.sm .icon.e {
+	width:138px;
+	height:138px;	
+	background: url(images/basic-icons/bache.png) center no-repeat;	
+	top:50px; 
+	left:200px;	
+	opacity: 1;
+	transform: scale(1);	
 }
 /*door*/
 .hsContent.doorCover {
@@ -194,20 +206,15 @@
 	position: absolute;
 	top: 50px;
 	right: 90px;
-	width: 163px;
+	width: 185px;
 	height: 192px;
-	background: url(images/gb-hang.png) top center no-repeat;
+	background: url(images/gb-hang-2.png) top center no-repeat;
 	-webkit-transform: rotate(-70deg);
 	transform: rotate(-70deg);
 	-webkit-transform-origin: top center;
 	transform-origin: top center;
 }
-/*Keyframes*/
-@-webkit-keyframes pathRotate { 
-	from { -webkit-transform: rotateZ(0deg);} 
-	to { -webkit-transform: rotateZ(360deg); } 
-} 
-@-webkit-keyframes electronFix { 
-	from { -webkit-transform: rotateX(90deg) rotateY(0deg); } 
-	to { -webkit-transform: rotateX(90deg) rotateY(-360deg);  }
-} 
+#slide-12 .hsContainer:first-child,
+#slide-12 .hsContainer:first-child .hsContent:first-child {
+	padding-right: 0;
+}
