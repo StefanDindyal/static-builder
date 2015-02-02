@@ -119,38 +119,141 @@
 	height: 82px;
 	background: url(images/burst-pro.png) center no-repeat;
 }
-/*carousel*/
-#slide-10 .anim.carousel {
-	width: 400px;
-	height: 200px;
-	margin: 0 auto 20px;
-	overflow: visible;
-}
-#slide-10 .anim.carousel.sm {		
+/*carousel-pro*/
+#slide-10 .anim.carousel,
+#slide-10 .anim.carousel .path {		
 	position:relative; 
-	width:295px; 
-	height:235px; 
-	margin:0 auto;
+	width:480px; 
+	height:240px; 	
+	overflow: visible;
 	-webkit-perspective: 0;
-	-webkit-transform-style: preserve-3d; 
-	-webkit-transform: rotateX(70deg) rotateY(180deg);
+	-webkit-transform-style: preserve-3d; 	
+}
+#slide-10 .anim.carousel {
+	/*rotateX to adjust depth*/	
+	-webkit-transform: rotateX(75deg) rotateY(180deg);
+	margin:0 auto 40px;
 }
 #slide-10 .anim.carousel .path {
-	width:295px; 
-	height:235px; 
-	position:relative; 	
-	-webkit-transform-style: preserve-3d;	
+	width: 480px;
+	height: 480px;
 }
 .anim.carousel .icon {
+	position: absolute;	
+}
+.anim.carousel .icon.a {	
+	width:138px;
+	height:138px;	
+	background: url(images/pro-icons/camera.png) center no-repeat;	
+	bottom:0px; 
+	right:50%;
+	margin-right: -69px;
+	opacity: 1;
+	transform: scale(1);	
+}
+.anim.carousel .icon.b {
+	width:138px;
+	height:138px;	
+	background: url(images/pro-icons/dog.png) center no-repeat;	
+	bottom:50px; 
+	right:30px;	
+	opacity: 1;
+	transform: scale(1);	
+}
+.anim.carousel .icon.c {
+	width:138px;
+	height:138px;	
+	background: url(images/pro-icons/calc.png) center no-repeat;	
+	top:50%; 
+	right:0px;
+	margin-top: -69px;
+	opacity: 1;
+	transform: scale(1);	
+}
+.anim.carousel .icon.d {
+	width:138px;
+	height:138px;	
+	background: url(images/pro-icons/music.png) center no-repeat;	
+	top:60px; 
+	right:30px;
+	opacity: 1;
+	transform: scale(1);	
+}
+.anim.carousel .icon.e {
+	width:138px;
+	height:138px;	
+	background: url(images/pro-icons/drill.png) center no-repeat;	
+	top:0px; 
+	right:100px;	
+	opacity: 1;
+	transform: scale(1);	
+}
+.anim.carousel .icon.f {	
+	width:138px;
+	height:138px;	
+	background: url(images/pro-icons/account.png) center no-repeat;	
+	top:0px; 
+	left:100px;
+	opacity: 1;
+	transform: scale(1);	
+}
+.anim.carousel .icon.g {
+	width:138px;
+	height:138px;	
+	background: url(images/pro-icons/trainer.png) center no-repeat;	
+	top:60px; 
+	left:30px;	
+	opacity: 1;
+	transform: scale(1);	
+}
+.anim.carousel .icon.h {
+	width:138px;
+	height:138px;	
+	background: url(images/pro-icons/bag.png) center no-repeat;	
+	top:50%; 
+	left:0px;
+	margin-top: -69px;
+	opacity: 1;
+	transform: scale(1);	
+}
+.anim.carousel .icon.i {
+	width:138px;
+	height:138px;	
+	background: url(images/pro-icons/cleaning.png) center no-repeat;	
+	bottom:50px; 
+	left:30px;
+	opacity: 1;
+	transform: scale(1);	
+}
+/*carousel-basic*/
+#slide-10 .anim.carousel.sm,
+#slide-10 .anim.carousel.sm .path {		
+	position:relative; 
+	width:380px; 
+	height:235px; 	
+	overflow: visible;
+	-webkit-perspective: 0;
+	-webkit-transform-style: preserve-3d;
+}
+#slide-10 .anim.carousel.sm {
+	/*rotateX to adjust depth*/
+	-webkit-transform: rotateX(75deg) rotateY(180deg);
+	margin:0 auto 40px;
+}
+#slide-10 .anim.carousel.sm .path {
+	height: 380px;
+}
+.anim.carousel.sm .icon {
 	position: absolute;	
 }
 .anim.carousel.sm .icon.a {	
 	width:108px;
 	height:108px;	
 	background: url(images/basic-icons/ball.png) center no-repeat;	
-	top:127px; 
-	left:50%;
-	margin-left: -54px;
+	bottom:0px; 
+	top: auto;
+	right:50%;
+	margin-right: -54px;
 	opacity: 1;
 	transform: scale(1);	
 }
@@ -158,8 +261,8 @@
 	width:138px;
 	height:138px;	
 	background: url(images/basic-icons/cake.png) center no-repeat;	
-	top:50px; 
-	left:0;	
+	top:140px; 
+	right:0;	
 	opacity: 1;
 	transform: scale(1);	
 }
@@ -168,7 +271,8 @@
 	height:138px;	
 	background: url(images/basic-icons/concert.png) center no-repeat;	
 	top:0px; 
-	left:75px;
+	right:30px;
+	margin: 0;
 	opacity: 1;
 	transform: scale(1);	
 }
@@ -177,7 +281,7 @@
 	height:138px;	
 	background: url(images/basic-icons/picnic.png) center no-repeat;	
 	top:0px; 
-	left:140px;
+	left:30px;
 	opacity: 1;
 	transform: scale(1);	
 }
@@ -185,8 +289,8 @@
 	width:138px;
 	height:138px;	
 	background: url(images/basic-icons/bache.png) center no-repeat;	
-	top:50px; 
-	left:200px;	
+	top:140px; 
+	left:0px;	
 	opacity: 1;
 	transform: scale(1);	
 }
@@ -208,7 +312,7 @@
 	right: 90px;
 	width: 185px;
 	height: 192px;
-	background: url(images/gb-hang-2.png) top center no-repeat;
+	background: url(images/gb-hang.png) top center no-repeat;
 	-webkit-transform: rotate(-70deg);
 	transform: rotate(-70deg);
 	-webkit-transform-origin: top center;
@@ -217,4 +321,36 @@
 #slide-12 .hsContainer:first-child,
 #slide-12 .hsContainer:first-child .hsContent:first-child {
 	padding-right: 0;
+}
+/*Mobile*/
+.mobile-anim {
+	position: relative;
+	padding: 20px 10px;
+	display: none;
+}
+.mobile-anim img {
+	display: block;
+	margin: 0 auto !important;
+	max-width: 100%;
+	height: auto;
+}
+@media only screen and ( max-width: 800px ) {
+	.hsContent {
+		height: auto;
+	}
+	.mobile-anim {
+		display: block;
+	}
+	.anim {
+		display: none;
+	}
+	.anim.types {
+		display: block;
+	}
+	#slide-10 h1 {
+		width: auto;
+	}
+	.anim {
+		overflow: visible;
+	}
 }

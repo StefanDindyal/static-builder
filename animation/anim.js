@@ -151,18 +151,18 @@ jQuery(function($){
 
 			}
 		});
-		var cTime = 10;
+		var timeScale = 30; // secs
 		var icon = new TimelineMax({repeat:-1});
 		icon.add([
-			TweenMax.fromTo($('.carousel.sm .path'), cTime, {rotationZ:0}, {rotationZ:360, ease: Linear.easeNone}),
-	  		TweenMax.fromTo($('.carousel.sm .path .icon'), cTime, {rotationZ:0, rotationX:90, scale: 1, opacity: 1}, {rotationZ:-360,rotationX:90, scale: 1, opacity: 1, ease: Linear.easeNone})
+			TweenMax.fromTo($('.carousel .path'), timeScale, {rotationZ:0}, {rotationZ:360, ease: Linear.easeNone}),
+	  		TweenMax.fromTo($('.carousel .path .icon'), timeScale, {rotationZ:0, rotationX:90, scale: 1, opacity: 1}, {rotationZ:-360,rotationX:90, scale: 1, opacity: 1, ease: Linear.easeNone})
 		]);
 				
 		// carousel scroll trigger
 		new ScrollScene(carouselSceneOptions)
 			.addTo(carouselController)
 			.triggerHook("onCenter")
-			.triggerElement('.carousel.sm')
+			.triggerElement('.carousel')
 			.setTween(icon);
 
 });
