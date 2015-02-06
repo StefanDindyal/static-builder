@@ -31,17 +31,21 @@ jQuery(function($){
                 // rotate the third message in
                 .add(TweenMax.from(".sign .three", 0.5, {rotationX:90, opacity:0, transformOrigin:"center center", ease:Quad.easeOut}))
                 // rotate the third message out
-                .add(TweenMax.to(".sign .three", 0.5, {rotationX:-90, opacity:0, transformOrigin:"center center", ease:Quad.easeOut, delay:1.0}));
+                .add(TweenMax.to(".sign .three", 0.5, {rotationX:-90, opacity:0, transformOrigin:"center center", ease:Quad.easeOut, delay:1.0}))
+                // rotate the fourth message in
+                .add(TweenMax.from(".sign .four", 0.5, {rotationX:90, opacity:0, transformOrigin:"center center", ease:Quad.easeOut}))
+                // rotate the fourth message out
+                .add(TweenMax.to(".sign .four", 0.5, {rotationX:-90, opacity:0, transformOrigin:"center center", ease:Quad.easeOut, delay:1.0}));
 
         /////////////////////////////////////////////////
 
         // faces animation
 
         // the duration of each animation
-        var animation_duration = 0.33;
+        var animation_duration = 0.4;
 
         // the time to wait before the next role animates
-        var animation_pause = "2.5";
+        var animation_pause = "2.2";
 
         // get each face
         var face_elements = $('.faces .face');
@@ -88,7 +92,7 @@ jQuery(function($){
                                 TweenMax.to(random_face(face_elements), animation_duration, {opacity: 1, ease: Power2.easeInOut})
                         ], "+="+animation_pause)
                 // stylist transition out
-                .add([                                
+                .add([
                                 TweenMax.to('.roles .stylist', animation_duration, {bottom: "100%", opacity: 0, ease: Power2.easeInOut})
                         ], "+="+animation_pause);
 
@@ -107,14 +111,14 @@ jQuery(function($){
         new ScrollScene(sceneOptions)
                 .offset(-200)
                 .addTo(controller)
-                .triggerHook("onCenter")
+                .triggerHook(0.3)
                 .triggerElement('.types') // use previous element as trigger, as top position changes during spin
                 .setTween(TweenMax.from('.burst .basic', 2, {rotation:360, left:100, opacity:0, ease: Bounce.easeInOut}));
         // roll in pro
         new ScrollScene(sceneOptions)
                 .offset(-200)
                 .addTo(controller)
-                .triggerHook("onCenter")
+                .triggerHook(0.3)
                 .triggerElement('.types') // use previous element as trigger, as top position changes during spin
                 .setTween(TweenMax.from('.burst .pro', 2, {rotation:360, left:100, opacity:0, ease: Bounce.easeInOut, delay: 1}));
 
@@ -125,44 +129,44 @@ jQuery(function($){
                 // slide in door
                 .add(TweenMax.from('.door', 2, {marginRight: -520, ease: Power4.easeIn}))
                 // rotate hanging
-                .add(TweenMax.to(".door .hanging", 0.5, {rotation:60, transformOrigin:"top center"}))
-                .add(TweenMax.to(".door .hanging", 0.5, {rotation:-40, transformOrigin:"top center"}))
-                .add(TweenMax.to(".door .hanging", 0.5, {rotation:25, transformOrigin:"top center"}))
-                .add(TweenMax.to(".door .hanging", 0.5, {rotation:-15, transformOrigin:"top center"}))
-                .add(TweenMax.to(".door .hanging", 0.5, {rotation:10, transformOrigin:"top center"}))
-                .add(TweenMax.to(".door .hanging", 0.5, {rotation:-5, transformOrigin:"top center"}))
-                .add(TweenMax.to(".door .hanging", 0.5, {rotation:3, transformOrigin:"top center"}))
-                .add(TweenMax.to(".door .hanging", 0.5, {rotation:0, transformOrigin:"top center"}));
+                .add(TweenMax.to(".door .hanging", 0.5, {rotation:60, transformOrigin:"50% 5.5%"}))
+                .add(TweenMax.to(".door .hanging", 0.5, {rotation:-40, transformOrigin:"50% 5.5%"}))
+                .add(TweenMax.to(".door .hanging", 0.5, {rotation:25, transformOrigin:"50% 5.5%"}))
+                .add(TweenMax.to(".door .hanging", 0.5, {rotation:-15, transformOrigin:"50% 5.5%"}))
+                .add(TweenMax.to(".door .hanging", 0.5, {rotation:10, transformOrigin:"50% 5.5%"}))
+                .add(TweenMax.to(".door .hanging", 0.5, {rotation:-5, transformOrigin:"50% 5.5%"}))
+                .add(TweenMax.to(".door .hanging", 0.5, {rotation:3, transformOrigin:"50% 5.5%"}))
+                .add(TweenMax.to(".door .hanging", 0.5, {rotation:0, transformOrigin:"50% 5.5%"}));
 
         // door scroll trigger
 
         new ScrollScene(sceneOptions)
                 .addTo(controller)
-                .triggerHook("onCenter")
+                .triggerHook("onEnter")
                 .triggerElement('.door')
                 .setTween(door);
 
         /////////////////////////////////////////////////
 
-        // carousel	
-		var carouselSceneOptions = {duration: 200, offset: -100};
-		var carouselController = new ScrollMagic({
-			globalSceneOptions: {
+        // carousel
+        var carouselSceneOptions = {duration: 200, offset: -100};
+        var carouselController = new ScrollMagic({
+                globalSceneOptions: {
 
-			}
-		});
-		var timeScale = 30; // secs
-		var icon = new TimelineMax({repeat:-1});
-		icon.add([
-			TweenMax.fromTo($('.carousel .path'), timeScale, {rotationZ:0}, {rotationZ:360, ease: Linear.easeNone}),
-	  		TweenMax.fromTo($('.carousel .path .icon'), timeScale, {rotationZ:0, rotationX:90, scale: 1, opacity: 1}, {rotationZ:-360,rotationX:90, scale: 1, opacity: 1, ease: Linear.easeNone})
-		]);
-				
-		// carousel scroll trigger
-		new ScrollScene(carouselSceneOptions)
-			.addTo(carouselController)
-			.triggerHook("onCenter")
-			.triggerElement('.carousel')
-			.setTween(icon);
+                }
+        });
+        var timeScale = 30; // secs
+        var icon = new TimelineMax({repeat:-1});
+        icon.add([
+            TweenMax.fromTo($('.carousel .path'), timeScale, {rotationZ:0}, {rotationZ:360, ease: Linear.easeNone}),            
+            TweenMax.fromTo($('.carousel .path .icon'), timeScale, {rotationZ:0, rotationX:90}, {rotationZ:-360,rotationX:90, transformOrigin:"center", ease: Linear.easeNone})
+        ]);
+
+        // carousel scroll trigger
+        new ScrollScene(carouselSceneOptions)
+            .addTo(carouselController)
+            .triggerHook("onCenter")
+            .triggerElement('.carousel')
+            .setTween(icon);
 
 });

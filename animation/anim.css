@@ -4,353 +4,455 @@
     src: url('../Fonts/Enriqueta-Bold.eot');
     src: url('../Fonts/Enriqueta-Bold.eot?#iefix') format('embedded-opentype'), url('../Fonts/Enriqueta-Bold.woff') format('woff'), url('../Fonts/Enriqueta-Bold.ttf') format('truetype');
 }
+/* Animations */
 /*mods*/
+/* line 7, ../../appassets/stylesheets/home.css.scss */
 .hsContent {
-	height: 100%;
+  height: 100%;
 }
+
 /*Animation CSS*/
+/* line 11, ../../appassets/stylesheets/home.css.scss */
 .anim {
-	position: relative;
-	overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
+
 /*sign*/
+/* line 16, ../../appassets/stylesheets/home.css.scss */
 .anim.sign {
-	width: 202px;
-	height: 305px;
-	background: url(images/sandwich-board.png) center no-repeat;
-	margin: 110px auto 0;
-	perspective: 200px;
+  width: 202px;
+  height: 305px;
+  background: url(assets/sandwich-board.png) center no-repeat;
+  margin: 110px auto 0;
+  perspective: 200px;
 }
+
+/* line 23, ../../appassets/stylesheets/home.css.scss */
 .anim.sign .msg {
-	position: absolute;
-	top: 0;	
-	width: 100%;
-	height: 250px;
-	font-family: 'Enriqueta-Bold';
-	font-size: 22px;
-	line-height: 25px;
-	color: #fff;
-	padding: 55px 30px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 250px;
+  font-family: 'Enriqueta-Bold';
+  font-size: 22px;
+  line-height: 25px;
+  color: #fff;
+  padding: 55px 30px;
 }
+
 /*faces*/
-.anim.faces {	
-	width: 100%;
-	height: 100%;
-	margin: 0 auto 0;
+/* line 35, ../../appassets/stylesheets/home.css.scss */
+.anim.faces {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto 0;
 }
+
+/* line 40, ../../appassets/stylesheets/home.css.scss */
 .anim .face {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-top: -105px;
-	margin-left: -104px;
-	width: 210px;
-	height: 208px;
-	z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -105px;
+  margin-left: -104px;
+  width: 210px;
+  height: 208px;
+  z-index: 5;
 }
+
+/* line 50, ../../appassets/stylesheets/home.css.scss */
 .anim .face.euro {
-	background: url(images/faces/euro.png) center no-repeat;
+  background: url(assets/faces/euro.png) center no-repeat;
 }
+
+/* line 53, ../../appassets/stylesheets/home.css.scss */
 .anim .face.afro {
-	background: url(images/faces/afro.png) center no-repeat;	
+  background: url(assets/faces/afro.png) center no-repeat;
 }
+
+/* line 56, ../../appassets/stylesheets/home.css.scss */
 .anim .face.asian {
-	background: url(images/faces/asian.png) center no-repeat;
+  background: url(assets/faces/asian.png) center no-repeat;
 }
+
+/* line 59, ../../appassets/stylesheets/home.css.scss */
 .anim .face.native {
-	background: url(images/faces/native.png) center no-repeat;
+  background: url(assets/faces/native.png) center no-repeat;
 }
+
+/* line 62, ../../appassets/stylesheets/home.css.scss */
 .anim.roles {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
 }
+
+/* line 70, ../../appassets/stylesheets/home.css.scss */
 .anim .role {
-	position: absolute;
-	bottom: 50%;
-	left: 5px;	
-	width: 100%;
-	height: 420px;
-	margin-bottom: -195px;
+  position: absolute;
+  bottom: 50%;
+  left: 5px;
+  width: 100%;
+  height: 420px;
+  margin-bottom: -195px;
 }
+
+/* line 78, ../../appassets/stylesheets/home.css.scss */
 .anim .role.carpenter {
-	background: url(images/roles/carpenter.png) center no-repeat;
+  background: url(assets/roles/carpenter.png) center no-repeat;
 }
+
+/* line 81, ../../appassets/stylesheets/home.css.scss */
 .anim .role.chef {
-	background: url(images/roles/chef.png) center no-repeat;
+  background: url(assets/roles/chef.png) center no-repeat;
 }
+
+/* line 84, ../../appassets/stylesheets/home.css.scss */
 .anim .role.coach {
-	background: url(images/roles/coach.png) center no-repeat;
+  background: url(assets/roles/coach.png) center no-repeat;
 }
+
+/* line 87, ../../appassets/stylesheets/home.css.scss */
 .anim .role.librarian {
-	background: url(images/roles/librarian.png) center no-repeat;
+  background: url(assets/roles/librarian.png) center no-repeat;
 }
+
+/* line 90, ../../appassets/stylesheets/home.css.scss */
 .anim .role.stylist {
-	background: url(images/roles/stylist.png) center no-repeat;
+  background: url(assets/roles/stylist.png) center no-repeat;
 }
+
 /*basic and pro*/
-.anim.types {}
+/* line 95, ../../appassets/stylesheets/home.css.scss */
 .anim.types > h1 {
-	position: relative;
-	display: inline-block;
-	width: auto;
+  position: relative;
+  display: inline-block;
+  width: auto;
 }
+
+/* line 100, ../../appassets/stylesheets/home.css.scss */
 .anim.types .burst {
-	position: absolute;
-	right: 0;
-	bottom: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
+
+/* line 105, ../../appassets/stylesheets/home.css.scss */
 .anim.types .burst .basic {
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	width: 70px;
-	height: 66px;
-	background: url(images/burst-basic.png) center no-repeat;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 70px;
+  height: 66px;
+  background: url(assets/burst-basic.png) center no-repeat;
 }
+
+/* line 113, ../../appassets/stylesheets/home.css.scss */
 .anim.types .burst .pro {
-	position: absolute;
-	bottom: 0px;
-	left: 0px;
-	width: 89px;
-	height: 82px;
-	background: url(images/burst-pro.png) center no-repeat;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 89px;
+  height: 82px;
+  background: url(assets/burst-pro.png) center no-repeat;
 }
-/*carousel-pro*/
+
+/*carousel*/
+/* line 123, ../../appassets/stylesheets/home.css.scss */
 #slide-10 .anim.carousel,
-#slide-10 .anim.carousel .path {		
-	position:relative; 
-	width:480px; 
-	height:240px; 	
-	overflow: visible;
-	-webkit-perspective: 0;
-	-webkit-transform-style: preserve-3d; 	
-}
-#slide-10 .anim.carousel {
-	/*rotateX to adjust depth*/	
-	-webkit-transform: rotateX(75deg) rotateY(180deg);
-	margin:0 auto 40px;
-}
 #slide-10 .anim.carousel .path {
-	width: 480px;
-	height: 480px;
+  position: relative;
+  width: 480px;
+  height: 240px;
+  overflow: visible;
+  -webkit-perspective: 0;
+  -webkit-transform-style: preserve-3d;
 }
+
+/* line 131, ../../appassets/stylesheets/home.css.scss */
+#slide-10 .anim.carousel {
+  /*rotateX to adjust depth*/
+  -webkit-transform: rotateX(75deg) rotateY(180deg);
+  margin: 0 auto 40px;
+}
+
+/* line 136, ../../appassets/stylesheets/home.css.scss */
+#slide-10 .anim.carousel .path {
+  width: 480px;
+  height: 480px;
+}
+
+/* line 140, ../../appassets/stylesheets/home.css.scss */
 .anim.carousel .icon {
-	position: absolute;	
+  position: absolute;
+  transform: scale(0.6);
 }
-.anim.carousel .icon.a {	
-	width:138px;
-	height:138px;	
-	background: url(images/pro-icons/camera.png) center no-repeat;	
-	bottom:0px; 
-	right:50%;
-	margin-right: -69px;
-	opacity: 1;
-	transform: scale(1);	
+
+/* line 143, ../../appassets/stylesheets/home.css.scss */
+.anim.carousel .icon.a {
+  width: 138px;
+  height: 138px;
+  background: url(assets/pro-icons/camera.png) center no-repeat;
+  bottom: 0px;
+  right: 50%;
+  margin-right: -69px;
 }
+
+/* line 152, ../../appassets/stylesheets/home.css.scss */
 .anim.carousel .icon.b {
-	width:138px;
-	height:138px;	
-	background: url(images/pro-icons/dog.png) center no-repeat;	
-	bottom:50px; 
-	right:30px;	
-	opacity: 1;
-	transform: scale(1);	
+  width: 138px;
+  height: 138px;
+  background: url(assets/pro-icons/dog.png) center no-repeat;
+  bottom: 50px;
+  right: 50px;
 }
+
+/* line 160, ../../appassets/stylesheets/home.css.scss */
 .anim.carousel .icon.c {
-	width:138px;
-	height:138px;	
-	background: url(images/pro-icons/calc.png) center no-repeat;	
-	top:50%; 
-	right:0px;
-	margin-top: -69px;
-	opacity: 1;
-	transform: scale(1);	
+  width: 138px;
+  height: 138px;
+  background: url(assets/pro-icons/calc.png) center no-repeat;
+  top: 50%;
+  right: 0px;
+  margin-top: -69px;
 }
+
+/* line 169, ../../appassets/stylesheets/home.css.scss */
 .anim.carousel .icon.d {
-	width:138px;
-	height:138px;	
-	background: url(images/pro-icons/music.png) center no-repeat;	
-	top:60px; 
-	right:30px;
-	opacity: 1;
-	transform: scale(1);	
+  width: 138px;
+  height: 138px;
+  background: url(assets/pro-icons/music.png) center no-repeat;
+  top: 80px;
+  right: 30px;
 }
+
+/* line 177, ../../appassets/stylesheets/home.css.scss */
 .anim.carousel .icon.e {
-	width:138px;
-	height:138px;	
-	background: url(images/pro-icons/drill.png) center no-repeat;	
-	top:0px; 
-	right:100px;	
-	opacity: 1;
-	transform: scale(1);	
+  width: 138px;
+  height: 138px;
+  background: url(assets/pro-icons/drill.png) center no-repeat;
+  top: 0px;
+  right: 100px;
 }
-.anim.carousel .icon.f {	
-	width:138px;
-	height:138px;	
-	background: url(images/pro-icons/account.png) center no-repeat;	
-	top:0px; 
-	left:100px;
-	opacity: 1;
-	transform: scale(1);	
+
+/* line 185, ../../appassets/stylesheets/home.css.scss */
+.anim.carousel .icon.f {
+  width: 138px;
+  height: 138px;
+  background: url(assets/pro-icons/account.png) center no-repeat;
+  top: 0px;
+  left: 100px;
 }
+
+/* line 193, ../../appassets/stylesheets/home.css.scss */
 .anim.carousel .icon.g {
-	width:138px;
-	height:138px;	
-	background: url(images/pro-icons/trainer.png) center no-repeat;	
-	top:60px; 
-	left:30px;	
-	opacity: 1;
-	transform: scale(1);	
+  width: 138px;
+  height: 138px;
+  background: url(assets/pro-icons/trainer.png) center no-repeat;
+  top: 60px;
+  left: 30px;
 }
+
+/* line 201, ../../appassets/stylesheets/home.css.scss */
 .anim.carousel .icon.h {
-	width:138px;
-	height:138px;	
-	background: url(images/pro-icons/bag.png) center no-repeat;	
-	top:50%; 
-	left:0px;
-	margin-top: -69px;
-	opacity: 1;
-	transform: scale(1);	
+  width: 138px;
+  height: 138px;
+  background: url(assets/pro-icons/bag.png) center no-repeat;
+  top: 50%;
+  left: 0px;
+  margin-top: -69px;
 }
+
+/* line 210, ../../appassets/stylesheets/home.css.scss */
 .anim.carousel .icon.i {
-	width:138px;
-	height:138px;	
-	background: url(images/pro-icons/cleaning.png) center no-repeat;	
-	bottom:50px; 
-	left:30px;
-	opacity: 1;
-	transform: scale(1);	
+  width: 138px;
+  height: 138px;
+  background: url(assets/pro-icons/cleaning.png) center no-repeat;
+  bottom: 50px;
+  left: 30px;
 }
+
 /*carousel-basic*/
+/* line 220, ../../appassets/stylesheets/home.css.scss */
 #slide-10 .anim.carousel.sm,
-#slide-10 .anim.carousel.sm .path {		
-	position:relative; 
-	width:380px; 
-	height:235px; 	
-	overflow: visible;
-	-webkit-perspective: 0;
-	-webkit-transform-style: preserve-3d;
-}
-#slide-10 .anim.carousel.sm {
-	/*rotateX to adjust depth*/
-	-webkit-transform: rotateX(75deg) rotateY(180deg);
-	margin:0 auto 40px;
-}
 #slide-10 .anim.carousel.sm .path {
-	height: 380px;
+  position: relative;
+  width: 420px;
+  height: 235px;
+  overflow: visible;
+  -webkit-perspective: 0;
+  -webkit-transform-style: preserve-3d;
 }
+
+/* line 228, ../../appassets/stylesheets/home.css.scss */
+#slide-10 .anim.carousel.sm {
+  /*rotateX to adjust depth*/
+  -webkit-transform: rotateX(75deg) rotateY(180deg);
+  margin: 0 auto 40px;
+}
+
+/* line 233, ../../appassets/stylesheets/home.css.scss */
+#slide-10 .anim.carousel.sm .path {
+  height: 450px;
+}
+
+/* line 236, ../../appassets/stylesheets/home.css.scss */
 .anim.carousel.sm .icon {
-	position: absolute;	
+  position: absolute;
 }
-.anim.carousel.sm .icon.a {	
-	width:108px;
-	height:108px;	
-	background: url(images/basic-icons/ball.png) center no-repeat;	
-	bottom:0px; 
-	top: auto;
-	right:50%;
-	margin-right: -54px;
-	opacity: 1;
-	transform: scale(1);	
+
+/* line 239, ../../appassets/stylesheets/home.css.scss */
+.anim.carousel.sm .icon.a {
+  width: 108px;
+  height: 108px;
+  background: url(assets/basic-icons/ball.png) center no-repeat;
+  bottom: 0px;
+  top: auto;
+  right: 35%;
+  margin-right: -54px;
 }
+
+/* line 249, ../../appassets/stylesheets/home.css.scss */
 .anim.carousel.sm .icon.b {
-	width:138px;
-	height:138px;	
-	background: url(images/basic-icons/cake.png) center no-repeat;	
-	top:140px; 
-	right:0;	
-	opacity: 1;
-	transform: scale(1);	
+  width: 138px;
+  height: 138px;
+  background: url(assets/basic-icons/cake.png) center no-repeat;
+  top: 140px;
+  right: 0;
 }
+
+/* line 257, ../../appassets/stylesheets/home.css.scss */
 .anim.carousel.sm .icon.c {
-	width:138px;
-	height:138px;	
-	background: url(images/basic-icons/concert.png) center no-repeat;	
-	top:0px; 
-	right:30px;
-	margin: 0;
-	opacity: 1;
-	transform: scale(1);	
+  width: 138px;
+  height: 138px;
+  background: url(assets/basic-icons/concert.png) center no-repeat;
+  top: 0px;
+  right: 30px;
+  margin: 0;
 }
+
+/* line 266, ../../appassets/stylesheets/home.css.scss */
 .anim.carousel.sm .icon.d {
-	width:150px;
-	height:138px;	
-	background: url(images/basic-icons/picnic.png) center no-repeat;	
-	top:0px; 
-	left:30px;
-	opacity: 1;
-	transform: scale(1);	
+  width: 150px;
+  height: 138px;
+  background: url(assets/basic-icons/picnic.png) center no-repeat;
+  top: 0px;
+  left: 45px;
 }
+
+/* line 274, ../../appassets/stylesheets/home.css.scss */
 .anim.carousel.sm .icon.e {
-	width:138px;
-	height:138px;	
-	background: url(images/basic-icons/bache.png) center no-repeat;	
-	top:140px; 
-	left:0px;	
-	opacity: 1;
-	transform: scale(1);	
+  width: 138px;
+  height: 138px;
+  background: url(assets/basic-icons/bache.png) center no-repeat;
+  top: 215px;
+  left: 25px;
 }
+
 /*door*/
+/* line 283, ../../appassets/stylesheets/home.css.scss */
 .hsContent.doorCover {
-	position: relative;
-	overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
+
+/* line 287, ../../appassets/stylesheets/home.css.scss */
 .anim.door {
-	float: right;
-	margin-right: 0;
-	width: 503px;
-	height: 650px;
-	background: url(images/door.jpg) top right no-repeat;
+  float: right;
+  margin-right: 0;
+  width: 503px;
+  height: 650px;
+  background: url(assets/door.jpg) top right no-repeat;
 }
+
+/* line 294, ../../appassets/stylesheets/home.css.scss */
 .anim.door .hanging {
-	position: absolute;
-	top: 50px;
-	right: 90px;
-	width: 185px;
-	height: 192px;
-	background: url(images/gb-hang.png) top center no-repeat;
-	-webkit-transform: rotate(-70deg);
-	transform: rotate(-70deg);
-	-webkit-transform-origin: top center;
-	transform-origin: top center;
+  position: absolute;
+  top: 50px;
+  right: 90px;
+  width: 185px;
+  height: 192px;
+  background: url(assets/gb-hang.png) top center no-repeat;
+  -webkit-transform: rotate(-70deg);
+  transform: rotate(-70deg);
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
 }
+
+/* line 307, ../../appassets/stylesheets/home.css.scss */
 #slide-12 .hsContainer:first-child,
 #slide-12 .hsContainer:first-child .hsContent:first-child {
-	padding-right: 0;
+  padding-right: 0;
 }
+
 /*Mobile*/
+/* line 311, ../../appassets/stylesheets/home.css.scss */
 .mobile-anim {
-	position: relative;
-	padding: 20px 10px;
-	display: none;
+  position: relative;
+  padding: 20px 10px;
+  display: none;
 }
+
+/* line 316, ../../appassets/stylesheets/home.css.scss */
 .mobile-anim img {
-	display: block;
-	margin: 0 auto !important;
-	max-width: 100%;
-	height: auto;
+  display: block;
+  margin: 0 auto !important;
+  max-width: 100%;
+  height: auto;
 }
-@media only screen and ( max-width: 800px ) {
-	.hsContent {
-		height: auto;
-	}
-	.mobile-anim {
-		display: block;
-	}
-	.anim {
-		display: none;
-	}
-	.anim.types {
-		display: block;
-	}
-	#slide-10 h1 {
-		width: auto;
-	}
-	.anim {
-		overflow: visible;
-	}
+
+@media only screen and (max-width: 800px) {
+  /* line 323, ../../appassets/stylesheets/home.css.scss */
+  .hsContent {
+    height: auto;
+  }
+
+  /* line 326, ../../appassets/stylesheets/home.css.scss */
+  .mobile-anim {
+    display: block;
+  }
+
+  /* line 331, ../../appassets/stylesheets/home.css.scss */
+  .anim.faces,
+  .anim.roles,
+  .anim.carousel {
+    display: none;
+  }
+
+  /* line 336, ../../appassets/stylesheets/home.css.scss */
+  .anim.sign,
+  .anim.types,
+  .anim.door {
+    display: block;
+  }
+
+  /* line 339, ../../appassets/stylesheets/home.css.scss */
+  .anim.sign {
+    margin-top: 30px;
+  }
+
+  /* line 342, ../../appassets/stylesheets/home.css.scss */
+  .anim.door {
+    left: 90px;
+  }
+
+  /* line 345, ../../appassets/stylesheets/home.css.scss */
+  #slide-10 h1 {
+    width: auto;
+  }
+
+  /* line 348, ../../appassets/stylesheets/home.css.scss */
+  .anim {
+    overflow: visible;
+  }
+
+  /* line 352, ../../appassets/stylesheets/home.css.scss */
+  #slide-12 .hsContainer:first-child,
+  #slide-12 .hsContainer:first-child .hsContent:first-child {
+    padding-left: 0;
+  }
 }
