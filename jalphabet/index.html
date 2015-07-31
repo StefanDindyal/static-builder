@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+			<meta charset="utf-8">
+			<meta http-equiv="X-UA-Compatible" content="IE=edge">
+			<title>J Alphabet</title>
+	</head>
+	<body>
+		<style type="text/css">
+			body {margin: 0;padding: 0;border: 0;outline: 0; font-family: 'Arial', sans-serif; font-size: 14px; line-height: 17px;}
+			#cont {padding: 40px;box-sizing: border-box;width: 100%;max-width: 980px;margin: 0 auto;}
+			#result {padding: 45px 0; text-align: center;}
+			ul.alphabet, ul.index {list-style: none;padding: 0;margin: 0;}
+			ul.alphabet {text-align: center;}
+			ul.index {padding: 0 20px;}
+			ul.alphabet li {display: inline-block;padding: 0;margin: 0;position: relative;}			
+			ul.alphabet li span {position: absolute; bottom: -33px; left: 0; width: 28px;}
+			ul.alphabet li.tab span {background-color: #e2e2e2;padding: 4px 0;}
+			ul.alphabet li.tab span:after {content: '\0020';position: absolute;top: -7px;left: 0;display: block;width: 0;height: 0;border-left: 14px solid transparent;border-right: 14px solid transparent;border-bottom: 7px solid #e2e2e2;}
+		</style>
+		<div id="cont">
+			<ul class="alphabet">
+				<li><button>A</button><span></span></li>
+				<li><button>B</button><span></span></li>
+				<li><button>C</button><span></span></li>
+				<li><button>D</button><span></span></li>
+				<li><button>E</button><span></span></li>
+				<li><button>F</button><span></span></li>
+				<li><button>G</button><span></span></li>
+				<li><button>H</button><span></span></li>
+				<li><button>I</button><span></span></li>
+				<li><button>J</button><span></span></li>
+				<li><button>K</button><span></span></li>
+				<li><button>L</button><span></span></li>
+				<li><button>M</button><span></span></li>
+				<li><button>N</button><span></span></li>
+				<li><button>O</button><span></span></li>
+				<li><button>P</button><span></span></li>
+				<li><button>Q</button><span></span></li>
+				<li><button>R</button><span></span></li>
+				<li><button>S</button><span></span></li>
+				<li><button>T</button><span></span></li>
+				<li><button>U</button><span></span></li>
+				<li><button>V</button><span></span></li>
+				<li><button>W</button><span></span></li>
+				<li><button>X</button><span></span></li>
+				<li><button>Y</button><span></span></li>
+				<li><button>Z</button><span></span></li>
+				<li><button class="all">All</button></li>
+			</ul>
+
+			<div id="result"></div>
+
+			<ul class="index">
+				<li><strong>Ant</strong> Some Text</li>
+				<li><strong>Author</strong> Some Text</li>
+				<li><strong>Average</strong> Some Text</li>
+				<li><strong>Butt</strong> Some Text</li>
+				<li><strong>Button</strong> Some Text</li>
+				<li><strong>Bass</strong> Some Text</li>
+				<li><strong>Cat</strong> Some Text</li>
+				<li><strong>Dog</strong> Some Text</li>
+				<li><strong>Evil</strong> Some Text</li>
+			</ul>
+		</div>
+
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+
+				var triggers = $('ul.alphabet li button');
+				var filters = $('ul.index li strong');
+
+				triggers.click(function() {
+					var am = $(this), me = am.parent();
+				    var takeLetter = am.text(), result = 0;
+				    filters.parent().hide();				    
+
+				    if(!$(this).hasClass('all')){
+				    $('ul.alphabet li').removeClass('tab');
+				    $('ul.alphabet li').find('span').text('');
+				    me.addClass('tab');
+				    me.find('span').text(takeLetter);
+				    filters.each(function(i) {
+				        if ( RegExp('^'+takeLetter).test($(this).text()) ) {
+				            result += 1;
+				            $(this).parent().fadeIn(222);
+				        }
+				    });
+				    $('#result').html('<b>'+(result<1 ? 'no results found' : result+' result(s) found')+'</b>');
+					} else {
+					$('ul.alphabet li').removeClass('tab');
+				    $('ul.alphabet li').find('span').text('');
+					filters.parent().fadeIn(250);
+					$('#result').html('');
+					}
+				    
+				    //if (result<1) {alert('There is no result.');}
+				});
+
+			});
+		</script>
+
+	</body>
+</html>
