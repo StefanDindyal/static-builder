@@ -16,7 +16,15 @@
 			'silky',
 			'rough',
 			'burning',
-			'cold'
+			'cold',
+			'crippled',
+			'blowing',
+			'sucking',
+			'unbecoming',
+			'beautiful',
+			'ugly',
+			'lazy',
+			'energetic'
 		],
 		'noun': [
 			'pencil',
@@ -37,7 +45,14 @@
 			'banana',
 			'whip',
 			'dildo',
-			'soda'
+			'soda',
+			'fish',
+			'cat',
+			'dog',
+			'horse',
+			'dolphin',
+			'elephant',
+			'ginger'
 		]
 	};
 
@@ -63,11 +78,15 @@
 			var array = self.words.noun;
 			var rand = array[Math.floor(Math.random() * array.length)];
 			var index = array.indexOf(rand);
+
 			self.firstNoun = rand;
-			if(index > -1){
-				array.splice(index,1);
-			}
+
 			rand = array[Math.floor(Math.random() * array.length)];
+
+			while(self.firstNoun == rand){
+				rand = array[Math.floor(Math.random() * array.length)];				
+			}
+			
 			self.secondNoun = rand;
 		}
 
@@ -82,6 +101,8 @@
 			var put = $('#whatami .answer strong');
 			var string = a + ' ' + b + ' ' + c;
 			put.text(string);
+
+			$('#whatami .answer').slideDown(300);
 
 			return false;
 		}	
