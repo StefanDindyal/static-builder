@@ -24,7 +24,14 @@
 			'beautiful',
 			'ugly',
 			'lazy',
-			'energetic'
+			'energetic',
+			'blazing',
+			'powerful',
+			'weak',
+			'lascivious',
+			'punished',
+			'solid',
+			'holey'
 		],
 		'noun': [
 			'pencil',
@@ -52,7 +59,9 @@
 			'horse',
 			'dolphin',
 			'elephant',
-			'ginger'
+			'ginger',
+			'monkey',
+			'donkey'
 		]
 	};
 
