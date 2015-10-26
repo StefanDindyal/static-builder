@@ -93,7 +93,8 @@
 			rand = array[Math.floor(Math.random() * array.length)];
 
 			while(self.firstNoun == rand){
-				rand = array[Math.floor(Math.random() * array.length)];				
+				rand = array[Math.floor(Math.random() * array.length)];
+				console.log(rand);			
 			}
 			
 			self.secondNoun = rand;
