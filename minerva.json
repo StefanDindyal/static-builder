@@ -1,0 +1,83 @@
+{
+	"version": 1,
+	"archive": [
+		{
+			"name": "eleanor blake",
+			"age": 16,
+			"gender": "female",
+			"eyeColor": "green",
+			"hairColor": "purple",
+			"type": "hybrid",
+			"Affiliation": "unknown",
+			"occupation": ["student","polydor academy"],
+			"classLevel": "c",
+			"threatLevel": "white",
+			"eval": ""
+		},
+		{
+			"name": "Cheryl Jacoby",
+			"age": 17,
+			"gender": "female",
+			"eyeColor": "Green",
+			"hairColor": "Purple",
+			"type": "hybrid",
+			"Affiliation": "Unknown",
+			"occupation": ["student","Polydor Academy"],
+			"classLevel": "c",
+			"threatLevel": "white",
+			"eval": ""
+		},
+		{
+			"name": "Adrian Moore",
+			"age": 16,
+			"gender": "female",
+			"eyeColor": "Green",
+			"hairColor": "Purple",
+			"type": "human",
+			"Affiliation": "Unknown",
+			"occupation": ["student","Polydor Academy"],
+			"classLevel": "c",
+			"threatLevel": "white",
+			"eval": ""
+		},
+		{
+			"name": "Gerard Allen",
+			"age": 15,
+			"gender": "female",
+			"eyeColor": "Green",
+			"hairColor": "Purple",
+			"type": "human",
+			"Affiliation": "Unknown",
+			"occupation": ["student","Polydor Academy"],
+			"classLevel": "c",
+			"threatLevel": "white",
+			"eval": ""
+		},
+		{
+			"name": "Claire Shaw",
+			"age": 16,
+			"gender": "female",
+			"eyeColor": "Green",
+			"hairColor": "Purple",
+			"type": "human",
+			"Affiliation": "Unknown",
+			"occupation": ["student","Polydor Academy"],
+			"classLevel": "c",
+			"threatLevel": "white",
+			"eval": ""
+		},
+		{
+			"name": "Helena Blake",
+			"age": 22,
+			"gender": "female",
+			"eyeColor": "Green",
+			"hairColor": "Purple",
+			"type": "hybrid",
+			"Affiliation": "Unknown",
+			"occupation": ["student","Polydor Academy"],
+			"classLevel": "c",
+			"threatLevel": "white",
+			"eval": ""
+		}
+	]
+}
