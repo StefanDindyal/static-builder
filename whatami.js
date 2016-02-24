@@ -18,8 +18,6 @@
 			'burning',
 			'cold',
 			'crippled',
-			'blowing',
-			'sucking',
 			'unbecoming',
 			'beautiful',
 			'ugly',
@@ -30,14 +28,11 @@
 			'weak',
 			'lascivious',
 			'punished',
-			'solid',
-			'holey'
+			'solid'
 		],
 		'noun': [
 			'pencil',
 			'ass',
-			'penis',
-			'vagina',
 			'hat',
 			'rack',
 			'table',
@@ -51,7 +46,6 @@
 			'carrot',
 			'banana',
 			'whip',
-			'dildo',
 			'soda',
 			'fish',
 			'cat',
