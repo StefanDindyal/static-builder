@@ -26,7 +26,7 @@
 		* {box-sizing: border-box;}
 		body {
 			font-family: sans-serif;
-			background-color: #262626;
+			background-color: #000;
 		}
 		ul li {
 			padding: 5px 10px;
@@ -42,21 +42,28 @@
 			display: none
 		}
 		#clockdiv {
-			margin: 20px auto;
-			padding: 20px;
-			border: 1px solid purple;
-			max-width: 720px;
+			position: absolute;
+			margin: 0px auto;
+			padding: 0px;
+			/*border: 1px solid purple;*/			
+			width: 100%;
 			text-align: center;
-			background-color: teal;
-			border-radius: 5px;
+			/*background-color: teal;*/
+			/*border-radius: 5px;*/
+			z-index: 100;
+			top: 50%;
+			left: 0;
+			transform: translate(0, -50%);
 		}
 		#clockdiv ul li {
 			background-color: grey;
 			padding: 30px;
 			font-size: 24px;
-			box-shadow: inset 0 0 15px rgba(0,0,0,0.25);
-			background-image: url('sayagata-400px.png');
-			color: #444;
+			/*box-shadow: inset 0 0 15px rgba(0,0,0,0.25);*/
+			/*background-image: url('sayagata-400px.png');*/
+			background-color: rgba(0,0,0,0.5);
+			box-shadow: 0 0 15px rgba(0,0,0,0.25);
+			color: red;
 		}
 		#feature {
 			text-align: center;
@@ -73,11 +80,17 @@
 			display: block;
 		}
 		#video {
-			width: 320px;
-			margin: 0 auto;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: 10;
 		}
 		#video video {
-			display: block
+			display: block;
+			width: 100%;
+			height: 100%;
 		}
 	</style>
 </head>
@@ -90,31 +103,36 @@
 			<li><span class="seconds"></span>s</li>
 		</ul>
 	</div>
-	<div id="feature"><div class="holder"></div></div>
-	<!-- <div id="video">
-		<video id="video1" width="320" height="240">
-			<source src="What is a VPN Lets talk about VPNs and why you should have one.mp4" type="video/mp4">
+	<!-- <div id="feature"><div class="holder"></div></div> -->
+	<div id="video">
+		<video id="video1" loop>
+			<source src="" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
-	</div> -->
+	</div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>	
 	<script type="text/javascript">		
 		"use strict";
 		!(function($){
 			var deadline = 'October 21 2016';
 			var feature = $('#feature .holder');
-			var video1 = $('#video1');
-			if(video1.length){
-				video1.on('loadeddata', function(){
-					var v = $(this).get(0);
-					console.log(v.duration+' : '+(v.duration/60));
-				});
-			}
+			// var video1 = $('#video1');
+			// if(video1.length){
+			// 	video1.on('loadeddata', function(){
+			// 		var v = $(this).get(0);
+			// 		console.log(v.duration+' : '+(v.duration/60));
+			// 		v.play();
+			// 	});
+			// }
 			initializeClock('clockdiv', deadline);
 			if(getTimeRemaining(deadline).minutes == getTimeRemaining(deadline).minutes){
-				$.getJSON('http://api.giphy.com/v1/gifs/random?rating=pg-13&api_key=dc6zaTOxFJmzC', function(a,b,c){
-					var img = a.data.fixed_height_downsampled_url;
-					feature.html('<img src="'+img+'"/>');	
+				$.getJSON('http://api.giphy.com/v1/gifs/search?q=creepy+scary&limit=1&rating=r&api_key=dc6zaTOxFJmzC', function(a,b,c){
+					var img = a.data[0].images.fixed_height.url;
+					var vid = a.data[0].images.fixed_height.mp4;
+					// feature.html('<img src="'+img+'"/>');
+					$('#video1 source').attr('src',vid);
+					$('#video1').get(0).load();
+					$('#video1').get(0).play();
 				});
 			}
 			function getTimeRemaining(endtime){
@@ -148,9 +166,13 @@
 						clearInterval(timeinterval);
 					}
 					if(t.minutes < minutes){
-						$.getJSON('http://api.giphy.com/v1/gifs/random?rating=pg-13&api_key=dc6zaTOxFJmzC', function(a,b,c){
-							var img = a.data.fixed_height_downsampled_url;
-							feature.html('<img src="'+img+'"/>');	
+						$.getJSON('http://api.giphy.com/v1/gifs/search?q=creepy+scary&limit=1&rating=r&api_key=dc6zaTOxFJmzC', function(a,b,c){
+							var img = a.data[0].images.fixed_height.url;
+							var vid = a.data[0].images.fixed_height.mp4;
+							// feature.html('<img src="'+img+'"/>');
+							$('#video1 source').attr('src',vid);
+							$('#video1').get(0).load();
+							$('#video1').get(0).play();
 						});
 						minutes = t.minutes;
 					}
