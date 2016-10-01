@@ -26,6 +26,7 @@
 		* {box-sizing: border-box;}
 		body {
 			font-family: sans-serif;
+			background-color: #262626;
 		}
 		ul li {
 			padding: 5px 10px;
@@ -90,29 +91,29 @@
 		</ul>
 	</div>
 	<div id="feature"><div class="holder"></div></div>
-	<div id="video">
+	<!-- <div id="video">
 		<video id="video1" width="320" height="240">
 			<source src="What is a VPN Lets talk about VPNs and why you should have one.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
-	</div>
+	</div> -->
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>	
-	<script type="text/javascript">
-		// var element = document.getElementById('content');
-		// document.getElementById('content').innerHTML = '<p>Hello World!</p>';
+	<script type="text/javascript">		
 		"use strict";
 		!(function($){
 			var deadline = 'October 21 2016';
 			var feature = $('#feature .holder');
 			var video1 = $('#video1');
-			video1.on('loadeddata', function(){
-				var v = $(this).get(0);
-				console.log(v.duration+' : '+(v.duration/60));
-			});					
+			if(video1.length){
+				video1.on('loadeddata', function(){
+					var v = $(this).get(0);
+					console.log(v.duration+' : '+(v.duration/60));
+				});
+			}
 			initializeClock('clockdiv', deadline);
 			if(getTimeRemaining(deadline).minutes == getTimeRemaining(deadline).minutes){
 				$.getJSON('http://api.giphy.com/v1/gifs/random?rating=pg-13&api_key=dc6zaTOxFJmzC', function(a,b,c){
-					var img = a.data.fixed_height_small_still_url;
+					var img = a.data.fixed_height_downsampled_url;
 					feature.html('<img src="'+img+'"/>');	
 				});
 			}
@@ -148,7 +149,7 @@
 					}
 					if(t.minutes < minutes){
 						$.getJSON('http://api.giphy.com/v1/gifs/random?rating=pg-13&api_key=dc6zaTOxFJmzC', function(a,b,c){
-							var img = a.data.fixed_height_small_still_url;
+							var img = a.data.fixed_height_downsampled_url;
 							feature.html('<img src="'+img+'"/>');	
 						});
 						minutes = t.minutes;
