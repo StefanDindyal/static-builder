@@ -80,9 +80,7 @@
 		}
 	</style>
 </head>
-<body>
-	<div id="content"></div>
-	<div id="pageTimer"></div>
+<body>	
 	<div id="clockdiv">
 		<ul>
 			<li><span class="days"></span>d</li>
@@ -98,34 +96,12 @@
 			Your browser does not support the video tag.
 		</video>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-	<script type="text/javascript" src="countdown.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>	
 	<script type="text/javascript">
 		// var element = document.getElementById('content');
 		// document.getElementById('content').innerHTML = '<p>Hello World!</p>';
 		"use strict";
 		!(function($){
-			var element = $('#content');
-			var str = '';
-			str += '<ul>';
-			for(var i = 0; i < 20; i++){
-				var offset = i+1;
-				str += '<li>card '+offset+'<div class="copy">Some works here for other things and so much more.</div></li>';
-			}
-			str += '</ul>';
-			element.html(str);
-			var liHeight = $('li').outerHeight();
-			$('li').on('click', function(){
-				var element = $(this);
-				if(element.hasClass('open')){
-					$('li').removeClass('open');
-					element.find('.copy').slideUp(300)
-				} else {
-					$('li').find('.copy').slideUp(300);
-					element.addClass('open');
-					element.find('.copy').slideDown(300);
-				}
-			});
 			var deadline = 'October 21 2016';
 			var feature = $('#feature .holder');
 			var video1 = $('#video1');
