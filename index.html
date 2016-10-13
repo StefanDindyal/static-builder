@@ -116,23 +116,26 @@
 		!(function($){
 			var deadline = 'Fri, 21 Oct 2016 18:00:00 GMT';
 			var feature = $('#feature .holder');
-			// var video1 = $('#video1');
-			// if(video1.length){
-			// 	video1.on('loadeddata', function(){
-			// 		var v = $(this).get(0);
-			// 		console.log(v.duration+' : '+(v.duration/60));
-			// 		v.play();
-			// 	});
-			// }
+			var video1 = $('#video1');
+			if(video1.length){
+				video1.on('loadeddata', function(){
+					var v = $(this).get(0);
+					console.log(v.duration+' : '+(v.duration*0.5));					
+					v.playbackRate = 2.0;
+					v.play();
+				});
+			}
 			initializeClock('clockdiv', deadline);
 			if(getTimeRemaining(deadline).minutes == getTimeRemaining(deadline).minutes){
 				$.getJSON('http://api.giphy.com/v1/gifs/search?q=creepy+scary&limit=1&rating=r&api_key=dc6zaTOxFJmzC', function(a,b,c){
 					var img = a.data[0].images.fixed_height.url;
 					var vid = a.data[0].images.fixed_height.mp4;
 					// feature.html('<img src="'+img+'"/>');
+					if($('#video1').get(0).played.length){
+						$('#video1').get(0).pause();
+					}
 					$('#video1 source').attr('src',vid);
 					$('#video1').get(0).load();
-					$('#video1').get(0).play();
 				});
 			}
 			function getTimeRemaining(endtime){
