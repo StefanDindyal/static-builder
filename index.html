@@ -4,7 +4,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title></title>
-	<link rel="stylesheet" href="">
+	<!-- <link rel="stylesheet" href=""> -->
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,600,700" rel="stylesheet">
 	<style type="text/css">
 		/*
 		*  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet
@@ -42,6 +43,7 @@
 			display: none
 		}
 		#clockdiv {
+			font-family: 'Crimson Text', serif;
 			position: absolute;
 			margin: 0px auto;
 			padding: 0px;
@@ -56,20 +58,21 @@
 			transform: translate(0, -50%);
 			opacity: 0;
 			transition: 2s ease-in-out;
-			transition-delay: 2s;
 		}
 		#clockdiv.show {
 			opacity: 1;
 		}
 		#clockdiv ul li {
-			background-color: grey;
+			background-color: transparent;
 			padding: 30px;
-			font-size: 24px;
+			font-size: 64px;
 			/*box-shadow: inset 0 0 15px rgba(0,0,0,0.25);*/
 			/*background-image: url('sayagata-400px.png');*/
-			background-color: rgba(0,0,0,0.5);
-			box-shadow: 0 0 15px rgba(0,0,0,0.25);
-			color: red;
+			background-color: rgba(0,0,0,0.75);
+			box-shadow: 0 0 15px rgba(0,0,0,0.75);
+			border: 1px solid crimson;
+			color: crimson;
+			text-shadow: 0 0 10px rgba(0,0,0,0.9);
 		}
 		#feature {
 			text-align: center;
@@ -117,7 +120,7 @@
 	</div>
 	<!-- <div id="feature"><div class="holder"></div></div> -->
 	<div id="video">
-		<video id="video1" loop preload="none">
+		<video id="video1" preload="auto" loop>
 			<source src="" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
@@ -134,12 +137,17 @@
 				video1.on('loadeddata', function(){
 					var v = $(this).get(0);
 					console.log(v.duration+' : '+(v.duration/7));
-					v.playbackRate = 0.5;
+					v.playbackRate = 1;
 					v.play();
 				});
 				video1.on('playing', function(){
 					$('#video').addClass('show');
-					$('#clockdiv').addClass('show');
+				});
+				video1.on('timeupdate', function(e){
+					console.log(this.currentTime +' : '+this.duration);
+					if(this.currentTime > 10 && !$('#clockdiv').hasClass('show')){
+						$('#clockdiv').addClass('show');
+					}
 				});
 			}
 			initializeClock('clockdiv', deadline);
