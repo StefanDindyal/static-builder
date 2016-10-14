@@ -120,23 +120,25 @@
 			if(video1.length){
 				video1.on('loadeddata', function(){
 					var v = $(this).get(0);
-					console.log(v.duration+' : '+(v.duration*0.5));					
-					v.playbackRate = 2.0;
+					console.log(v.duration+' : '+(v.duration/7));
+					v.playbackRate = 0.5;
 					v.play();
 				});
 			}
 			initializeClock('clockdiv', deadline);
 			if(getTimeRemaining(deadline).minutes == getTimeRemaining(deadline).minutes){
-				$.getJSON('http://api.giphy.com/v1/gifs/search?q=creepy+scary&limit=1&rating=r&api_key=dc6zaTOxFJmzC', function(a,b,c){
-					var img = a.data[0].images.fixed_height.url;
-					var vid = a.data[0].images.fixed_height.mp4;
-					// feature.html('<img src="'+img+'"/>');
-					if($('#video1').get(0).played.length){
-						$('#video1').get(0).pause();
-					}
-					$('#video1 source').attr('src',vid);
-					$('#video1').get(0).load();
-				});
+				// $.getJSON('http://api.giphy.com/v1/gifs/search?q=creepy+scary&limit=1&rating=r&api_key=dc6zaTOxFJmzC', function(a,b,c){
+				// 	var img = a.data[0].images.fixed_height.url;
+				// 	var vid = a.data[0].images.fixed_height.mp4;
+				// 	// feature.html('<img src="'+img+'"/>');
+				// 	if($('#video1').get(0).played.length){
+				// 		$('#video1').get(0).pause();
+				// 	}
+				// 	$('#video1 source').attr('src',vid);
+				// 	$('#video1').get(0).load();
+				// });
+				$('#video1 source').attr('src','countdown-vid.mp4');
+				$('#video1').get(0).load();
 			}
 			function getTimeRemaining(endtime){
 				var t = Date.parse(endtime) - Date.parse(new Date());
@@ -169,14 +171,14 @@
 						clearInterval(timeinterval);
 					}
 					if(t.minutes < minutes){
-						$.getJSON('http://api.giphy.com/v1/gifs/search?q=creepy+scary&limit=1&rating=r&api_key=dc6zaTOxFJmzC', function(a,b,c){
-							var img = a.data[0].images.fixed_height.url;
-							var vid = a.data[0].images.fixed_height.mp4;
-							// feature.html('<img src="'+img+'"/>');
-							$('#video1 source').attr('src',vid);
-							$('#video1').get(0).load();
-							$('#video1').get(0).play();
-						});
+						// $.getJSON('http://api.giphy.com/v1/gifs/search?q=creepy+scary&limit=1&rating=r&api_key=dc6zaTOxFJmzC', function(a,b,c){
+						// 	var img = a.data[0].images.fixed_height.url;
+						// 	var vid = a.data[0].images.fixed_height.mp4;
+						// 	// feature.html('<img src="'+img+'"/>');
+						// 	$('#video1 source').attr('src',vid);
+						// 	$('#video1').get(0).load();
+						// 	$('#video1').get(0).play();
+						// });
 						minutes = t.minutes;
 					}
 				}
