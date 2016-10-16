@@ -3,122 +3,33 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title></title>
-	<!-- <link rel="stylesheet" href=""> -->
+	<title>MONSTER IV: Countdown</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,600,700" rel="stylesheet">
-	<style type="text/css">
-		/*
-		*  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet
-		*/
-		html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
-		body{line-height:1}
-		article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
-		nav ul{list-style:none}
-		blockquote,q{quotes:none}
-		blockquote:before,blockquote:after,q:before,q:after{content:none}
-		a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
-		ins{background-color:#ff9;color:#000;text-decoration:none}
-		mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
-		del{text-decoration:line-through}
-		abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
-		table{border-collapse:collapse;border-spacing:0}
-		hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
-		input,select{vertical-align:middle}
-		* {box-sizing: border-box;}
-		body {
-			font-family: sans-serif;
-			background-color: #000;
-		}
-		ul li {
-			padding: 5px 10px;
-			margin: 5px 5px;
-			border: 1px solid #262626;
-			border-radius: 5px;
-			background-color: teal;
-			color: lime;
-			cursor: pointer;
-			display: inline-block;
-		}
-		ul li .copy {
-			display: none
-		}
-		#clockdiv {
-			font-family: 'Crimson Text', serif;
-			position: absolute;
-			margin: 0px auto;
-			padding: 0px;
-			/*border: 1px solid purple;*/			
-			width: 100%;
-			text-align: center;
-			/*background-color: teal;*/
-			/*border-radius: 5px;*/
-			z-index: 100;
-			top: 50%;
-			left: 0;
-			transform: translate(0, -50%);
-			opacity: 0;
-			transition: 2s ease-in-out;
-		}
-		#clockdiv.show {
-			opacity: 1;
-		}
-		#clockdiv ul li {
-			background-color: transparent;
-			padding: 30px;
-			font-size: 64px;
-			/*box-shadow: inset 0 0 15px rgba(0,0,0,0.25);*/
-			/*background-image: url('sayagata-400px.png');*/
-			background-color: rgba(0,0,0,0.75);
-			box-shadow: 0 0 15px rgba(0,0,0,0.75);
-			border: 1px solid crimson;
-			color: crimson;
-			text-shadow: 0 0 10px rgba(0,0,0,0.9);
-		}
-		#feature {
-			text-align: center;
-			padding: 10px;
-		}
-		#feature .holder {
-			display: inline-block;
-			border: 1px dashed purple;
-			border-radius: 5px;
-			padding: 10px;
-			background-image: url('sayagata-400px.png');
-		}
-		#feature .holder img {
-			display: block;
-		}
-		#video {
-			position: fixed;
-			width: 100%;
-			height: 100%;
-			top: 0;
-			left: 0;
-			z-index: 10;
-			opacity: 0;
-			transition: 2s ease-in-out;
-		}
-		#video.show {
-			opacity: 1;
-		}
-		#video video {
-			display: block;
-			width: 100%;
-			height: 100%;
-		}
-	</style>
+	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" type="text/css" href="pace.css">
 </head>
-<body>	
-	<div id="clockdiv">
-		<ul>
-			<li><span class="days"></span>d</li>
-			<li><span class="hours"></span>h</li>
-			<li><span class="minutes"></span>m</li>
-			<li><span class="seconds"></span>s</li>
-		</ul>
+<body>
+	<div class="outer">
+		<div id="clockdiv">
+			<div class="logo">
+				<a href="http://arkgalleries.com/MONSTER"><img src="MONSTER-IV-Mast.png" alt="MONSTER IV: Art Show &amp; Halloween Party" border="0"/></a>
+			</div>
+			<div class="counter">
+				<ul>
+					<li><span class="days"></span>days</li>
+					<li><span class="hours"></span>hours</li>
+					<li><span class="minutes"></span>minutes</li>
+					<li><span class="seconds"></span>secs</li>
+				</ul>
+			</div>
+			<div class="tickets">
+				<a href="http://arkgalleries.com/MONSTER">Tickets</a>
+			</div>
+		</div>
 	</div>
 	<!-- <div id="feature"><div class="holder"></div></div> -->
+	<div id="play"></div>
 	<div id="video">
 		<video id="video1" preload="auto" loop>
 			<source src="" type="video/mp4">
@@ -127,90 +38,6 @@
 	</div>
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 	<script src="pace.min.js" type="text/javascript"></script>
-	<script type="text/javascript">		
-		"use strict";
-		!(function($){
-			var deadline = 'Fri, 21 Oct 2016 18:00:00 GMT';
-			var feature = $('#feature .holder');
-			var video1 = $('#video1');
-			if(video1.length){
-				video1.on('loadeddata', function(){
-					var v = $(this).get(0);
-					console.log(v.duration+' : '+(v.duration/7));
-					v.playbackRate = 1;
-					v.play();
-				});
-				video1.on('playing', function(){
-					$('#video').addClass('show');
-				});
-				video1.on('timeupdate', function(e){
-					console.log(this.currentTime +' : '+this.duration);
-					if(this.currentTime > 10 && !$('#clockdiv').hasClass('show')){
-						$('#clockdiv').addClass('show');
-					}
-				});
-			}
-			initializeClock('clockdiv', deadline);
-			if(getTimeRemaining(deadline).minutes == getTimeRemaining(deadline).minutes){
-				// $.getJSON('http://api.giphy.com/v1/gifs/search?q=creepy+scary&limit=1&rating=r&api_key=dc6zaTOxFJmzC', function(a,b,c){
-				// 	var img = a.data[0].images.fixed_height.url;
-				// 	var vid = a.data[0].images.fixed_height.mp4;
-				// 	// feature.html('<img src="'+img+'"/>');
-				// 	if($('#video1').get(0).played.length){
-				// 		$('#video1').get(0).pause();
-				// 	}
-				// 	$('#video1 source').attr('src',vid);
-				// 	$('#video1').get(0).load();
-				// });
-				$('#video1 source').attr('src','countdown-vid.mp4');
-				$('#video1').get(0).load();
-			}
-			function getTimeRemaining(endtime){
-				var t = Date.parse(endtime) - Date.parse(new Date());
-				var seconds = Math.floor( (t/1000) % 60 );
-				var minutes = Math.floor( (t/1000/60) % 60 );
-				var hours = Math.floor( (t/(1000*60*60)) % 24 );
-				var days = Math.floor( t/(1000*60*60*24) );
-				return {
-					'total': t,
-					'days': days,
-					'hours': hours,
-					'minutes': minutes,
-					'seconds': seconds
-				};
-			}
-			function initializeClock(id, endtime){
-				var clock = document.getElementById(id);
-				var minutes = getTimeRemaining(endtime).minutes;
-				function updateClock(){
-					var t = getTimeRemaining(endtime);
-					var daysSpan = clock.querySelector('.days');
-					var hoursSpan = clock.querySelector('.hours');
-					var minutesSpan = clock.querySelector('.minutes');
-					var secondsSpan = clock.querySelector('.seconds');
-					daysSpan.innerHTML = t.days;
-				    hoursSpan.innerHTML = t.hours;
-				    minutesSpan.innerHTML = t.minutes;
-				    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-					if(t.total<=0){
-						clearInterval(timeinterval);
-					}
-					if(t.minutes < minutes){
-						// $.getJSON('http://api.giphy.com/v1/gifs/search?q=creepy+scary&limit=1&rating=r&api_key=dc6zaTOxFJmzC', function(a,b,c){
-						// 	var img = a.data[0].images.fixed_height.url;
-						// 	var vid = a.data[0].images.fixed_height.mp4;
-						// 	// feature.html('<img src="'+img+'"/>');
-						// 	$('#video1 source').attr('src',vid);
-						// 	$('#video1').get(0).load();
-						// 	$('#video1').get(0).play();
-						// });
-						minutes = t.minutes;
-					}
-				}
-				updateClock(); // run function once at first to avoid delay
-				var timeinterval = setInterval(updateClock,1000);
-			}			
-		})(jQuery);
-	</script>
+	<script src="scripts.js" type="text/javascript"></script>
 </body>
 </html>

@@ -1,0 +1,153 @@
+/*
+*  html5 doctor css reset | http://html5doctor.com/html-5-reset-stylesheet
+*/
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent}
+body{line-height:1}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+nav ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:none}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent}
+ins{background-color:#ff9;color:#000;text-decoration:none}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold}
+del{text-decoration:line-through}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}
+table{border-collapse:collapse;border-spacing:0}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0}
+input,select{vertical-align:middle}
+* {box-sizing: border-box;}
+body {
+	font-family: sans-serif;
+	background-color: #000;
+}
+ul li {
+	display: inline-block;
+}
+ul li .copy {
+	display: none
+}
+.outer {
+	position: relative;
+	padding: 50px 30px;
+}
+#clockdiv {
+	font-family: 'Times', serif;
+	font-weight: bold;
+	margin: 0px;
+	padding: 0px;			
+	width: 100%;
+	max-width: 503px;
+	text-align: center;
+	z-index: 100;	
+	position: relative;	
+	opacity: 0;
+	transition: 2s ease-in-out;
+}
+#clockdiv.show {
+	opacity: 1;
+}
+#clockdiv .logo {
+	margin-bottom: -10px;
+}
+#clockdiv .logo img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+#clockdiv .counter {
+	padding: 0 30px;
+	margin-bottom: 15px;
+}
+#clockdiv ul {
+	font-size: 0;
+	background-color: #fff;
+	padding: 10px 16px;
+	box-shadow: 0 0 10px rgba(0,0,0,0.75);
+}
+#clockdiv ul li {
+	background-color: transparent;
+	padding: 0 4px;
+	margin: 0;	
+	text-transform: uppercase;
+	border: 0;
+	color: #000;
+	font-size: 20px;
+}
+#clockdiv ul li span {
+	font-size: 26px;
+	padding-right: 5px;
+}
+#clockdiv .tickets {
+	text-align: center;
+}
+#clockdiv .tickets a {
+	display: inline-block;
+	font-size: 22px;
+	padding: 10px 20px;
+	background-color: #fff;
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+	box-shadow: 0 0 10px rgba(0,0,0,0.75);
+}
+#feature {
+	text-align: center;
+	padding: 10px;
+}
+#feature .holder {
+	display: inline-block;
+	border: 1px dashed purple;
+	border-radius: 5px;
+	padding: 10px;
+	background-image: url('sayagata-400px.png');
+}
+#feature .holder img {
+	display: block;
+}
+#video {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	opacity: 0;
+	transition: 2s ease-in-out;
+}
+#play {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 20;
+	display: none;
+	background: url(play-button-large-poster-overlay) center no-repeat;
+}
+#video.show {
+	opacity: 1;
+}
+#video video {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+/*Mobile*/
+@media only screen and (max-width: 767px) {
+	.outer {
+		padding: 10px 30px;
+	}
+	#clockdiv {
+		max-width: 320px;
+	}
+	#clockdiv ul li {
+		font-size: 16px;
+	}
+	#clockdiv ul li span {
+		font-size: 16px;
+	}
+	#clockdiv .tickets a {
+		font-size: 18px;
+	}
+}
