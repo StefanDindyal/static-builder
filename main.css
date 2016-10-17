@@ -41,6 +41,8 @@ ul li .copy {
 	z-index: 100;	
 	position: relative;	
 	opacity: 0;
+	-webkit-transition: 2s ease-in-out;
+	-ms-transition: 2s ease-in-out;
 	transition: 2s ease-in-out;
 }
 #clockdiv.show {
@@ -113,17 +115,12 @@ ul li .copy {
 	left: 0;
 	z-index: 10;
 	opacity: 0;
+	-webkit-transition: 2s ease-in-out;
+	-ms-transition: 2s ease-in-out;
 	transition: 2s ease-in-out;
-}
-#play {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 20;
-	display: none;
-	background: url(play-button-large-poster-overlay) center no-repeat;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 #video.show {
 	opacity: 1;
@@ -149,5 +146,10 @@ ul li .copy {
 	}
 	#clockdiv .tickets a {
 		font-size: 18px;
+	}
+}
+@media only screen and (max-width: 736px) {
+	#clockdiv {
+		max-width: 503px;
 	}
 }

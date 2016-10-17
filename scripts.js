@@ -1,4 +1,3 @@
-"use strict";
 !(function($){
 	var cur = 0; 
 	var end = 0;
@@ -6,21 +5,15 @@
 	var feature = $('#feature .holder');
 	var video1 = $('#video1');
 	var $window = $(window).width();
-	if($window <= 1024){
-		$('#video').addClass('show');
-		$('#play').show();
-	}
-	if(video1.length){
-		$('#video1 source').attr('src','countdown-vid.mp4');
+	if(video1.length && $window >= 1025){
+		$('#video1 source').attr('src',videoSrc);
 		$('#video1').get(0).load();
 		video1.on('loadeddata', function(){
 			var v = $(this).get(0);		
 			v.playbackRate = 1;
-			// v.volume = 0;
 			v.play();
 			cur = $('#video1').get(0).currentTime; 
-			end = $('#video1').get(0).duration;
-			// Start Clock
+			end = $('#video1').get(0).duration;			
 			initializeClock('clockdiv', deadline);
 		});
 		video1.on('playing', function(){
@@ -30,15 +23,21 @@
 			if(this.currentTime > 10 && !$('#clockdiv').hasClass('show')){
 				cur = this.currentTime;
 				end = this.duration;
-				// console.log(cur+' : '+end);
 				$('#clockdiv').addClass('show');
 			}
 		});
-	}	
-	$('#play').on('click', function(e){
-		e.preventDefault();
-		video1.get(0).play();
-	});
+		$('#play').on('click', function(e){
+			e.preventDefault();
+			video1.get(0).play();
+		});
+	} else {
+		Pace.on('done', function(){
+			$('#video video').remove();
+			$('#video').css('background-image','url('+videoFb+')').addClass('show');
+			$('#clockdiv').addClass('show');
+		});
+		initializeClock('clockdiv', deadline);
+	}
 	function getTimeRemaining(endtime){
 		var t = Date.parse(endtime) - Date.parse(new Date());
 		var seconds = Math.floor( (t/1000) % 60 );
@@ -68,18 +67,20 @@
 		    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
 			if(t.total<=0){
 				clearInterval(timeinterval);
-			}			
-			var mark = end/7;			
-			if(t.days == 0){
-				mark = end - (mark * 0.5);
-			} else {
-				mark = end - (mark * (t.days));
 			}
-			if($('#video1').get(0).currentTime < mark){
-				$('#video1').get(0).currentTime = mark;
+			if($window >= 1025){		
+				var mark = end/7;			
+				if(t.days == 0){
+					mark = end - (mark * 0.5);
+				} else {
+					mark = end - (mark * (t.days));
+				}
+				if($('#video1').get(0).currentTime < mark){
+					$('#video1').get(0).currentTime = mark;
+				}
 			}
 		}
-		updateClock(); // run function once at first to avoid delay
+		updateClock();
 		var timeinterval = setInterval(updateClock,1000);
 	}			
 })(jQuery);
