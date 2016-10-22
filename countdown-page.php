@@ -17,7 +17,7 @@
 	<div class="outer">
 		<div id="clockdiv">
 			<div class="logo">
-				<a href="http://www.arkgalleries.com/"><img src="<?php bloginfo('template_directory');?>/countdown/MONSTER-IV-Mast.png" alt="MONSTER IV: Art Show &amp; Halloween Party" border="0"/></a>
+				<a href="http://www.arkgalleries.com/home"><img src="<?php bloginfo('template_directory');?>/countdown/MONSTER-IV-Mast.png" alt="MONSTER IV: Art Show &amp; Halloween Party" border="0"/></a>
 			</div>
 			<div class="counter">
 				<ul>
@@ -27,8 +27,11 @@
 					<li><span class="seconds"></span>secs</li>
 				</ul>
 			</div>
-			<div class="tickets">
+			<!-- <div class="tickets">
 				<a href="http://www.arkgalleries.com/MONSTER">Tickets</a>
+			</div> -->
+			<div class="home">
+				<a href="http://www.arkgalleries.com/home">Continue to Arkgalleries.com</a>
 			</div>
 		</div>
 	</div>

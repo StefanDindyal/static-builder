@@ -92,6 +92,20 @@ ul li .copy {
 	text-decoration: none;
 	text-transform: uppercase;
 	box-shadow: 0 0 10px rgba(0,0,0,0.75);
+	margin-bottom: 15px;
+}
+#clockdiv .home {
+	text-align: center;
+}
+#clockdiv .home a {
+	display: inline-block;
+	font-size: 20px;
+	padding: 10px 20px;
+	background-color: #fff;
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+	box-shadow: 0 0 10px rgba(0,0,0,0.75);
 }
 #feature {
 	text-align: center;

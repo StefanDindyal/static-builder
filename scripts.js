@@ -1,7 +1,7 @@
 !(function($){
 	var cur = 0; 
 	var end = 0;
-	var deadline = 'Fri Oct 21 2016 18:00:00';
+	var deadline = 'Mon Oct 31 2016 00:00:00';
 	var feature = $('#feature .holder');
 	var video1 = $('#video1');
 	var $window = $(window).width();
@@ -65,8 +65,12 @@
 		    hoursSpan.innerHTML = t.hours;
 		    minutesSpan.innerHTML = t.minutes;
 		    secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-			if(t.total<=0){
+			if(t.total <= 0){
 				clearInterval(timeinterval);
+				daysSpan.innerHTML = '0';
+		    	hoursSpan.innerHTML = '0';
+		    	minutesSpan.innerHTML = '0';
+		    	secondsSpan.innerHTML = '0';
 			}
 			if($window >= 1025){		
 				var mark = end/7;			
@@ -76,7 +80,11 @@
 					mark = end - (mark * (t.days));
 				}
 				if($('#video1').get(0).currentTime < mark){
-					$('#video1').get(0).currentTime = mark;
+					if(t.total <= 0){
+						// Do nothing
+					} else {
+						$('#video1').get(0).currentTime = mark;
+					}				
 				}
 			}
 		}
